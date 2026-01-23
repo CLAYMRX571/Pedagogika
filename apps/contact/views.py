@@ -1,3 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .models import Contact
 
-# Create your views here.
+def Contactviews(request):
+    contact = list(Contact.objects.all())
+
+    context = {
+        'contact': contact,
+    }
+
+    return render(request, 'contact.html', context)
+
+def lan_switch_contact(request, lan):
+    return redirect(f'/{lan}/contact/')

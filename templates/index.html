@@ -20,10 +20,10 @@
         </a>
         <div class="nav-links">
             <a href="{% url 'about' %}">{% trans 'ABOUT' %}</a> 
-            <a href="">{% trans 'SERVICES' %}</a> 
-            <a href="">{% trans 'GALLERY' %}</a> 
-            <a href="">{% trans 'TEAM' %}</a> 
-            <a href="">{% trans 'CONTACT' %}</a>  
+            <a href="{% url 'services' %}">{% trans 'SERVICES' %}</a> 
+            <a href="{% url 'gallery' %}">{% trans 'GALLERY' %}</a> 
+            <a href="{% url 'team' %}">{% trans 'TEAM' %}</a> 
+            <a href="{% url 'contact' %}">{% trans 'CONTACT' %}</a>  
             <div class="lang-wrapper">
                 <a class="lang-toggle">{% trans 'LANGUAGES' %}</a> 
                 <div class="lang-dropdown"> 
@@ -94,11 +94,11 @@
 
 <footer class="footer-container">
     <nav class="footer-nav">
-        <a href="{% url 'about' %}">ABOUT</a>
-        <a href="">SERVICES</a>
-        <a href="">GALLERY</a>
-        <a href="">TEAM</a>
-        <a href="">CONTACT</a>
+        <a href="{% url 'about' %}">{% trans 'ABOUT' %}</a>
+        <a href="{% url 'services' %}">{% trans 'SERVICES' %}</a>
+        <a href="{% url 'gallery' %}">{% trans 'GALLERY' %}</a>
+        <a href="{% url 'team' %}">{% trans 'TEAM' %}</a>
+        <a href="{% url 'contact' %}">{% trans 'CONTACT' %}</a>
     </nav>
 
     <div class="footer-contact">
@@ -107,10 +107,10 @@
     </div>
 
     <div class="social-icons">
-        <a href="" target="_blank"><i class='fa-brands fa-facebook'></i></a>
-        <a href="" target="_blank"><i class='fa-brands fa-instagram'></i></a>
-        <a href="" target="_blank"><i class='fa-brands fa-linkedin'></i></a>
-        <a href="" target="_blank"><i class='fa-brands fa-youtube'></i></a>
+        <a href="https://www.facebook.com/utas.uz" target="_blank"><i class='fa-brands fa-facebook'></i></a>
+        <a href="https://www.instagram.com/utas.uz/" target="_blank"><i class='fa-brands fa-instagram'></i></a>
+        <a href="https://www.linkedin.com/company/utasuz" target="_blank"><i class='fa-brands fa-linkedin'></i></a>
+        <a href="https://www.youtube.com/@utasuz" target="_blank"><i class='fa-brands fa-youtube'></i></a>
     </div>
 </footer>
 

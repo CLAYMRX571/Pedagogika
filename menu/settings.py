@@ -136,10 +136,10 @@ MODELTRANSLATION_PREPOPULATE_LANGUAGE = 'uz'
 MODELTRANSLATION_TRANSLATION_FILES = (
     'apps.home.translations',
     'apps.about.translations',
-    # 'apps.contact.translations',
-    # 'apps.gallery.translations',
-    # 'apps.services.translations',
-    # 'apps.team.translations',
+    'apps.contact.translations',
+    'apps.gallery.translations',
+    'apps.services.translations',
+    'apps.team.translations',
 )
 
 # Internationalization

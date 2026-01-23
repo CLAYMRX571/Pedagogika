@@ -1,3 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .models import Services
 
-# Create your views here.
+def Servicesviews(request):
+    services = list(Services.objects.all())
+
+    context = {
+        'services': services,
+    }
+
+    return render(request, 'services.html', context)
+
+def lan_switch_services(request, lan):
+    return redirect(f'/{lan}/services/')

@@ -1,3 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .models import Gallery
 
-# Create your views here.
+def Galleryviews(request):
+    gallery = list(Gallery.objects.all())
+
+    context = {
+        'gallery': gallery,
+    }
+
+    return render(request, 'gallery.html', context)
+
+def lan_switch_gallery(request, lan):
+    return redirect(f'/{lan}/gallery/')

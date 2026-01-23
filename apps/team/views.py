@@ -1,3 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .models import Team
 
-# Create your views here.
+def Teamviews(request):
+    team = list(Team.objects.all())
+
+    context = {
+        'team': team,
+    }
+
+    return render(request, 'team.html', context)
+
+def lan_switch_team(request, lan):
+    return redirect(f'/{lan}/team/')

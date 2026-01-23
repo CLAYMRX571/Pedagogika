@@ -1,6 +1,6 @@
 from modeltranslation.translator import register, TranslationOptions
-from .models import About
+from .models import Services
 
-@register(About)
+@register(Services)
 class CategoryTranslationOptions(TranslationOptions):
     fields = ('title', 'text',)
