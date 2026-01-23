@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shohsanam</title>
+    <link rel="icon" href="{% static 'assets/img/utas.jpg' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"  />
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+</head>
+<body>
+
+<nav class="nav"> 
+    <div class="nav-inner">
+        <a href="{% url 'home' %}" class="brand">
+            <img src="{% static 'assets/img/UTAS.jpg' %}" alt="Pedagogika Logo">
+            <span>{% trans 'Pedagogika' %}</span>
+        </a>
+        <div class="nav-links">
+            <a href="{% url 'about' %}">{% trans 'ABOUT' %}</a> 
+            <a href="">{% trans 'SERVICES' %}</a> 
+            <a href="">{% trans 'GALLERY' %}</a> 
+            <a href="">{% trans 'TEAM' %}</a> 
+            <a href="">{% trans 'CONTACT' %}</a>  
+            <div class="lang-wrapper">
+                <a class="lang-toggle">{% trans 'LANGUAGES' %}</a> 
+                <div class="lang-dropdown"> 
+                    <a href="{% url 'lan_switch' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> UZ</a> 
+                    <a href="{% url 'lan_switch' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> EN</a> 
+                </div> 
+            </div> 
+        </div>
+    </div>
+</nav>
+
+<div class="hero-slider"> 
+    <div class="overlay"></div>
+    <div class="slides-wrapper">
+        {% for item in home %}
+        <div class="slide">
+            <h2>{{ item.title }}</h2> 
+            <p>{{ item.text | safe}}</p> 
+        </div> 
+        {% endfor %}
+    </div>
+    <button class="arrow left">&#10094;</button>
+    <button class="arrow right">&#10095;</button>
+    <button class="down-arrow">↓</button> 
+</div>
+
+<div class="banner">
+    <div class="banner-left"></div>
+    <div class="banner-right">
+        <h1>WE WILL OPEN THE WORLD OF KNOWLEDGE FOR YOU</h1>
+        <p>KNOWLEDGE | HARD WORK | INTELLIGENCE</p>
+        <button id="seeMoreBtn">SEE MORE ABOUT US</button>
+    </div>
+</div>
+
+<div class="stats-container">
+    <div class="stat-card">
+        <div class="stat-number">1700</div>
+        <div class="stat-label">Laudantium</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">2406</div>
+        <div class="stat-label">Doloremque</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">2405</div>
+        <div class="stat-label">Perspiciatis</div>
+    </div>
+</div>
+
+<div class="newsletter-container">
+    <h1 class="newsletter-title">NEWSLETTER</h1>
+    <p class="newsletter-subtitle"> Nemo enim ipsum voluptatem quia voluptas sit aspernatur aut odit aut fugit </p>
+    <form id="newsletterForm" onsubmit="return false;">
+        <div class="form-group">
+            <div class="input-wrapper">
+                <span class="input-icon"><i class='fa-solid fa-user'></i></span>
+                <input type="text" placeholder="Name" id="nameInput" required>
+            </div>
+            <div class="input-wrapper">
+                <span class="input-icon"><i class='fa-solid fa-envelope'></i></span>
+                <input type="email" placeholder="Email" id="emailInput" required>
+            </div>
+            <button type="button" class="subscribe-btn">SUBSCRIBE NOW</button>
+        </div>
+    </form>
+</div>
+
+<footer class="footer-container">
+    <nav class="footer-nav">
+        <a href="{% url 'about' %}">ABOUT</a>
+        <a href="">SERVICES</a>
+        <a href="">GALLERY</a>
+        <a href="">TEAM</a>
+        <a href="">CONTACT</a>
+    </nav>
+
+    <div class="footer-contact">
+        <i class='fa-solid fa-phone'></i>
+        <span>+998900155727</span>
+    </div>
+
+    <div class="social-icons">
+        <a href="" target="_blank"><i class='fa-brands fa-facebook'></i></a>
+        <a href="" target="_blank"><i class='fa-brands fa-instagram'></i></a>
+        <a href="" target="_blank"><i class='fa-brands fa-linkedin'></i></a>
+        <a href="" target="_blank"><i class='fa-brands fa-youtube'></i></a>
+    </div>
+</footer>
+
+<script src="{% static 'assets/js/script.js' %}"></script>
+</body>
+</html>
