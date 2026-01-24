@@ -27,8 +27,8 @@
             <div class="lang-wrapper">
                 <a class="lang-toggle">{% trans 'LANGUAGES' %}</a> 
                 <div class="lang-dropdown"> 
-                    <a href="{% url 'lan_switch' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> UZ</a> 
-                    <a href="{% url 'lan_switch' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> EN</a> 
+                    <a href="{% url 'lan_switch_services' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> UZ</a> 
+                    <a href="{% url 'lan_switch_services' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> EN</a> 
                 </div> 
             </div> 
         </div>
@@ -38,7 +38,7 @@
 <div class="hero-slider"> 
     <div class="overlay"></div>
     <div class="slides-wrapper">
-        {% for item in home %}
+        {% for item in services %}
         <div class="slide">
             <h2>{{ item.title }}</h2> 
             <p>{{ item.text | safe}}</p> 
