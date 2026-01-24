@@ -46,31 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-const statsData = [
-    { number: 1700, label: "Laudantium" },
-    { number: 2406, label: "Doloremque" },
-    { number: 2405, label: "Perspiciatis" }
-];
-
-// Ma'lumotlarni DOM-ga yozish (agar statik emas bo'lsa)
-document.addEventListener("DOMContentLoaded", function() {
-    const container = document.querySelector('.stats-container');
-    container.innerHTML = ''; // Tozalash
-
-    statsData.forEach(item => {
-        const card = document.createElement('div');
-        card.className = 'stat-card';
-
-        card.innerHTML = `
-            <div class="stat-number">${item.number}</div>
-            <div class="stat-divider"></div>
-            <div class="stat-label">${item.label}</div>
-        `;
-
-        container.appendChild(card);
-    });
-});
-
 document.getElementById('newsletterForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
@@ -104,4 +79,19 @@ document.addEventListener("DOMContentLoaded", function() {
     }, { threshold: 0.1 });
 
     elements.forEach(el => observer.observe(el));
+});
+
+const circles = document.querySelectorAll(".circle");
+const infoBox = document.getElementById("infoBox");
+
+circles.forEach(circle => {
+    circle.addEventListener("click", () => {
+        circles.forEach(c => c.classList.remove("active"));
+        circle.classList.add("active");
+
+        infoBox.innerHTML = `
+            <h3>${circle.dataset.title}</h3>
+            <p>${circle.dataset.text}</p>
+        `;
+    });
 });
