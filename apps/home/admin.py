@@ -6,7 +6,7 @@ from .models import Home
 
 @admin.register(Home)
 class HomeAdmin(TranslationAdmin):
-    list_display = ['title', 'text',]
+    list_display = ('title', 'text')
 
     formfield_overrides = {
         models.TextField: {'widget': CKEditor5Widget(config_name='default')},
