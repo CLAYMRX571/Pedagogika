@@ -1,9 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const wrapper = document.querySelector(".slides-wrapper");
     const slides = document.querySelectorAll(".slide");
-    const nextBtn = document.querySelector(".arrow.right");
-    const prevBtn = document.querySelector(".arrow.left");
-    const downBtn = document.querySelector(".down-arrow");
 
     let index = 0;
     const total = slides.length;
@@ -11,16 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
     function updateSlide() {
         wrapper.style.transform = `translateX(-${index * 100}%)`;
     }
-
-    nextBtn.addEventListener("click", () => {
-        index = (index + 1) % total;
-        updateSlide();
-    });
-
-    prevBtn.addEventListener("click", () => {
-        index = (index - 1 + total) % total;
-        updateSlide();
-    });
 
     // Auto slide every 5 seconds
     setInterval(() => {
