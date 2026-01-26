@@ -49,3 +49,46 @@ document.getElementById('newsletterForm').addEventListener('submit', function(e)
     document.getElementById('nameInput').value = '';
     document.getElementById('emailInput').value = '';
 });
+
+const faders = document.querySelectorAll('.fade-up');
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+}, { threshold: 0.2 });
+
+faders.forEach(el => observer.observe(el));
+
+// MODAL IMAGE
+const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modalImg');
+const closeBtn = document.querySelector('.close');
+
+document.querySelectorAll('.gallery-card img').forEach(img => {
+    img.addEventListener('click', () => {
+        modal.style.display = 'flex';
+        modalImg.src = img.src;
+    });
+});
+
+closeBtn.onclick = () => modal.style.display = 'none';
+modal.onclick = e => {
+    if (e.target === modal) modal.style.display = 'none';
+};
+
+document.querySelectorAll('.img-box img').forEach(img => {
+    img.addEventListener('click', () => {
+        modal.style.display = 'flex';
+        modalImg.src = img.src;
+    });
+});
+
+document.querySelectorAll('.overlay-text').forEach(text => {
+    text.addEventListener('click', (e) => {
+        e.stopPropagation(); 
+        modal.style.display = 'flex';
+        modalImg.src = text.getAttribute('data-img');
+    });
+});

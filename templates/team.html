@@ -20,7 +20,6 @@
         </a>
         <div class="nav-links">
             <a href="{% url 'about' %}">{% trans 'ABOUT' %}</a> 
-            <a href="{% url 'services' %}">{% trans 'SERVICES' %}</a> 
             <a href="{% url 'gallery' %}">{% trans 'GALLERY' %}</a> 
             <a href="{% url 'team' %}">{% trans 'TEAM' %}</a> 
             <a href="{% url 'contact' %}">{% trans 'CONTACT' %}</a>   
@@ -47,8 +46,91 @@
     </div>
 </div>
 
+<section class="team-section">
+    <h2 class="section-title fade-up">OUR TEAM</h2>
 
+    <div class="team-grid">
+        <div class="team-card fade-up">
+            <img src="{% static 'assets/img/xona.jpg' %}" alt="">
+            <h3>Shohsanam opa</h3>
+            <p>Simple Teacher Ielts 7+</p>
+            <div class="socials">
+                <a href="https://www.linkedin.com/company/utasuz" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://www.facebook.com/utas.uz" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://t.me/utasuz" target="_blank">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+                <a href="https://www.instagram.com/utas.uz/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
 
+        <div class="team-card fade-up">
+            <img src="{% static 'assets/img/xona.jpg' %}" alt="">
+            <h3>Shohsanam opa</h3>
+            <p>Simple Teacher Ielts 7+</p>
+            <div class="socials">
+                <a href="https://twitter.com" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://facebook.com" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://plus.google.com" target="_blank">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+                <a href="https://example.com" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="team-card fade-up">
+            <img src="{% static 'assets/img/xona.jpg' %}" alt="">
+            <h3>Shohsanam opa</h3>
+            <p>Simple Teacher Ielts 7+</p>
+            <div class="socials">
+                <a href="https://twitter.com" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://facebook.com" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://plus.google.com" target="_blank">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+                <a href="https://example.com" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="team-card fade-up">
+            <img src="{% static 'assets/img/xona.jpg' %}" alt="">
+            <h3>Shohsanam opa</h3>
+            <p>Simple Teacher Ielts 7+</p>
+            <div class="socials">
+                <a href="https://twitter.com" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://facebook.com" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://plus.google.com" target="_blank">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+                <a href="https://example.com" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
 <div class="stats-container">
     <div class="stat-card">
@@ -64,6 +146,21 @@
         <div class="stat-label">Perspiciatis</div>
     </div>
 </div>
+
+<section class="hero fade-up">
+    <div class="overlay">
+        <div class="hero-content">
+            <div class="icon">🌐</div>
+            <p class="quote">
+                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                consectetur, adipisci.
+            </p>
+            <a href="mailto:info@example.com">info@example.com</a>
+            <span class="author">Thompson</span>
+            <span class="time">6 days ago</span>
+        </div>
+    </div>
+</section>
 
 <div class="newsletter-container">
     <h1 class="newsletter-title">NEWSLETTER</h1>
@@ -86,7 +183,6 @@
 <footer class="footer-container">
     <nav class="footer-nav">
         <a href="{% url 'about' %}">{% trans 'ABOUT' %}</a>
-        <a href="{% url 'services' %}">{% trans 'SERVICES' %}</a>
         <a href="{% url 'gallery' %}">{% trans 'GALLERY' %}</a>
         <a href="{% url 'team' %}">{% trans 'TEAM' %}</a>
         <a href="{% url 'contact' %}">{% trans 'CONTACT' %}</a>

@@ -20,7 +20,6 @@
         </a>
         <div class="nav-links">
             <a href="{% url 'about' %}">{% trans 'ABOUT' %}</a> 
-            <a href="{% url 'services' %}">{% trans 'SERVICES' %}</a> 
             <a href="{% url 'gallery' %}">{% trans 'GALLERY' %}</a> 
             <a href="{% url 'team' %}">{% trans 'TEAM' %}</a> 
             <a href="{% url 'contact' %}">{% trans 'CONTACT' %}</a>   
@@ -47,8 +46,70 @@
     </div>
 </div>
 
+<section class="gallery-section">
+    <h2 class="gallery-title">GALLERY</h2>
 
+    <div class="gallery-grid">
+        <div class="gallery-card fade-up">
+            <div class="img-box">
+                <img src="{% static 'assets/img/xona.jpg' %}" alt="">
+                <div class="overlay-text" data-img="{% static 'assets/img/xona.jpg' %}">Pedagogy</div>
+            </div>
+            <button>Dolorem</button>
+            <p>Doloremque laudantium</p>
+        </div>
 
+        <div class="gallery-card fade-up">
+            <div class="img-box">
+                <img src="{% static 'assets/img/xona.jpg' %}" alt="">
+                <div class="overlay-text" data-img="{% static 'assets/img/xona.jpg' %}">Pedagogy</div>
+            </div>
+            <button>Dolorem</button>
+            <p>Doloremque laudantium</p>
+        </div>
+
+        <div class="gallery-card fade-up">
+            <div class="img-box">
+                <img src="{% static 'assets/img/xona.jpg' %}" alt="">
+                <div class="overlay-text" data-img="{% static 'assets/img/xona.jpg' %}">Pedagogy</div>
+            </div>
+            <button>Dolorem</button>
+            <p>Doloremque laudantium</p>
+        </div>
+
+        <div class="gallery-card fade-up">
+            <div class="img-box">
+                <img src="{% static 'assets/img/dars.jpg' %}" alt="">
+                <div class="overlay-text" data-img="{% static 'assets/img/dars.jpg' %}">Pedagogy</div>
+            </div>
+            <button>Dolorem</button>
+            <p>Doloremque laudantium</p>
+        </div>
+
+        <div class="gallery-card fade-up">
+            <div class="img-box">
+                <img src="{% static 'assets/img/dars.jpg' %}" alt="">
+                <div class="overlay-text" data-img="{% static 'assets/img/dars.jpg' %}">Pedagogy</div>
+            </div>
+            <button>Dolorem</button>
+            <p>Doloremque laudantium</p>
+        </div>
+
+        <div class="gallery-card fade-up">
+            <div class="img-box">
+                <img src="{% static 'assets/img/dars.jpg' %}" alt="">
+                <div class="overlay-text" data-img="{% static 'assets/img/dars.jpg' %}">Pedagogy</div>
+            </div>
+            <button>Dolorem</button>
+            <p>Doloremque laudantium</p>
+        </div>
+    </div>
+</section>
+
+<div class="modal" id="modal">
+    <span class="close">&times;</span>
+    <img id="modalImg">
+</div>
 
 <div class="stats-container">
     <div class="stat-card">
@@ -86,7 +147,6 @@
 <footer class="footer-container">
     <nav class="footer-nav">
         <a href="{% url 'about' %}">{% trans 'ABOUT' %}</a>
-        <a href="{% url 'services' %}">{% trans 'SERVICES' %}</a>
         <a href="{% url 'gallery' %}">{% trans 'GALLERY' %}</a>
         <a href="{% url 'team' %}">{% trans 'TEAM' %}</a>
         <a href="{% url 'contact' %}">{% trans 'CONTACT' %}</a>

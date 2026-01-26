@@ -50,7 +50,6 @@ INSTALLED_APPS = [
     'apps.about',
     'apps.contact',
     'apps.gallery',
-    'apps.services',
     'apps.team',
 ]
 
@@ -138,7 +137,6 @@ MODELTRANSLATION_TRANSLATION_FILES = (
     'apps.about.translations',
     'apps.contact.translations',
     'apps.gallery.translations',
-    'apps.services.translations',
     'apps.team.translations',
 )
 

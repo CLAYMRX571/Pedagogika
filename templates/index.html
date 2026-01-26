@@ -19,8 +19,7 @@
             <span>{% trans 'Pedagogika' %}</span>
         </a>
         <div class="nav-links">
-            <a href="{% url 'about' %}">{% trans 'ABOUT' %}</a> 
-            <a href="{% url 'services' %}">{% trans 'SERVICES' %}</a> 
+            <a href="{% url 'about' %}">{% trans 'ABOUT' %}</a>  
             <a href="{% url 'gallery' %}">{% trans 'GALLERY' %}</a> 
             <a href="{% url 'team' %}">{% trans 'TEAM' %}</a> 
             <a href="{% url 'contact' %}">{% trans 'CONTACT' %}</a>  
@@ -52,7 +51,7 @@
     <div class="banner-middle">
         <h1>WE WILL OPEN THE WORLD OF KNOWLEDGE FOR YOU</h1>
         <p class="subtitle">KNOWLEDGE | HARD WORK | INTELLIGENCE</p>
-        <button id="seeMoreBtn">SEE MORE ABOUT US</button>
+        <a href="{% url 'about' %}" id="seeMoreBtn">SEE MORE ABOUT US</a>
     </div>
     <div class="banner-right">
         <div class="info-box" id="infoBox">
@@ -98,7 +97,6 @@
 <footer class="footer-container">
     <nav class="footer-nav">
         <a href="{% url 'about' %}">{% trans 'ABOUT' %}</a>
-        <a href="{% url 'services' %}">{% trans 'SERVICES' %}</a>
         <a href="{% url 'gallery' %}">{% trans 'GALLERY' %}</a>
         <a href="{% url 'team' %}">{% trans 'TEAM' %}</a>
         <a href="{% url 'contact' %}">{% trans 'CONTACT' %}</a>

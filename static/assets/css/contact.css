@@ -393,3 +393,73 @@ input:focus-visible,
     transform: translateY(-5px) scale(1.15);
     color: hotpink;
 }
+
+.map-section {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.map-section iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.map-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  background: #000;
+  color: #fff;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  border: 4px solid #00c2d1;
+  text-align: center;
+  padding: 40px 25px;
+}
+
+.map-card::after {
+  content: "";
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 18px solid #00c2d1;
+}
+
+.map-card h3 {
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.map-card p {
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #929292;
+}
+
+.map-card span {
+  display: block;
+  font-size: 15px;
+  color: #929292;
+  margin-top: 6px;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.9s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}

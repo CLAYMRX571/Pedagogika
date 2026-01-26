@@ -1,2 +1,3 @@
 # Pedagogy education
-Globallashuv sharoitida talaba yoshlarda madaniyatlararo kompetentlikni rivojlantirishning raqamli pedagogik platformasi
+Globallashuv sharoitida talaba yoshlarda madaniyatlararo 
+kompetentlikni rivojlantirishning raqamli pedagogik platformasi

@@ -49,3 +49,30 @@ document.getElementById('newsletterForm').addEventListener('submit', function(e)
     document.getElementById('nameInput').value = '';
     document.getElementById('emailInput').value = '';
 });
+
+const el = document.querySelector('.fade-up');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.3 });
+
+observer.observe(el);
+
+document.addEventListener('DOMContentLoaded', function() 
+{ 
+    const elements = document.querySelectorAll('.fade-up'); 
+    const observer = new IntersectionObserver((entries) => { 
+        entries.forEach(entry => { 
+            if (entry.isIntersecting) { 
+                entry.target.classList.add('visible'); 
+            } 
+        }); 
+    }, { threshold: 0.1 }); 
+    elements.forEach(el => { 
+        observer.observe(el); 
+    }); 
+});

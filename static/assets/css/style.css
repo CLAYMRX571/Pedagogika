@@ -442,7 +442,7 @@ input:focus-visible,
 }
 
 #seeMoreBtn {
-    display: inline-block  !important;
+    display: block  !important;
     width: fit-content !important;
     padding: 8px 10px;
     background: white;
@@ -455,6 +455,7 @@ input:focus-visible,
     white-space: nowrap;
     min-width: unset !important;
     margin: 0 auto;
+    text-decoration: none;
 }
 
 #seeMoreBtn:hover {
