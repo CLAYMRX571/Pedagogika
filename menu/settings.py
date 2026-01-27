@@ -122,14 +122,16 @@ LANGUAGE_CODE = 'uz'
 LANGUAGES = [
     ('uz', _('Uzbek')),
     ('en', _('English')),
+    ('tr', _('Turkcha')),
+    ('ru', _('Russcha')),
 ] 
 
 LOCALE_PATHS = [
     os.path.join(BASE_DIR / 'locale'),
 ]
 
-MODELTRANSLATION_LANGUAGES = ('uz', 'en',)
-MODELTRANSLATION_FALLBACK_LANGUAGES = {'default':('en', 'uz'), 'uz':('en',), 'en':('uz',),}
+MODELTRANSLATION_LANGUAGES = ('uz', 'en', 'tr', 'ru')
+MODELTRANSLATION_FALLBACK_LANGUAGES = {'default':('en', 'uz'), 'uz':('en',), 'en':('uz',), 'tr':('en',), 'ru':('en',),}
 MODELTRANSLATION_PREPOPULATE_LANGUAGE = 'uz'
 
 MODELTRANSLATION_TRANSLATION_FILES = (

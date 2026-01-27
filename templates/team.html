@@ -5,8 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shohsanam</title>
-    <link rel="icon" href="{% static 'assets/img/utas.jpg' %}" type="image/x-icon">
+    <title>Shodiyeva Shohsanam Furqatovna</title>
+    <link rel="icon" href="{% static 'assets/img/edu.jpg' %}" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"  />
     <link rel="stylesheet" href="{% static 'assets/css/team.css' %}">
 </head>
@@ -15,8 +15,8 @@
 <nav class="nav"> 
     <div class="nav-inner">
         <a href="{% url 'home' %}" class="brand">
-            <img src="{% static 'assets/img/UTAS.jpg' %}" alt="Pedagogika Logo">
-            <span>{% trans 'Pedagogika' %}</span>
+            <img src="{% static 'assets/img/edu.jpg' %}" alt="Pedagogika Logo">
+            <span>{% trans 'GLOBAL COMPETENCE EDU' %}</span>
         </a>
         <div class="nav-links">
             <a href="{% url 'about' %}">{% trans 'ABOUT' %}</a> 
@@ -28,6 +28,8 @@
                 <div class="lang-dropdown"> 
                     <a href="{% url 'lan_switch_team' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> UZ</a> 
                     <a href="{% url 'lan_switch_team' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> EN</a> 
+                    <a href="{% url 'lan_switch_team' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> TR</a> 
+                    <a href="{% url 'lan_switch_team' 'ru' %}"><img src="{% static 'assets/img/ru.png' %}" width="24" height="16"> RU</a> 
                 </div> 
             </div> 
         </div>

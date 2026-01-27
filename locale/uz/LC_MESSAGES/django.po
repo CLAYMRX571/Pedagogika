@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-26 14:21+0500\n"
+"POT-Creation-Date: 2026-01-27 14:49+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,41 +26,49 @@ msgstr ""
 msgid "English"
 msgstr ""
 
+#: .\menu\settings.py:125
+msgid "Turkcha"
+msgstr ""
+
+#: .\menu\settings.py:126
+msgid "Russcha"
+msgstr ""
+
 #: .\templates\about.html:19 .\templates\contact.html:19
 #: .\templates\gallery.html:19 .\templates\index.html:19
 #: .\templates\team.html:19
-msgid "Pedagogika"
-msgstr "Pedagogika"
+msgid "GLOBAL COMPETENCE EDU"
+msgstr "UMUMIY KOMPETENSIYA TA'LIMI"
 
-#: .\templates\about.html:22 .\templates\about.html:118
-#: .\templates\contact.html:22 .\templates\contact.html:101
-#: .\templates\gallery.html:22 .\templates\gallery.html:149
-#: .\templates\index.html:22 .\templates\index.html:99 .\templates\team.html:22
-#: .\templates\team.html:185
+#: .\templates\about.html:22 .\templates\about.html:120
+#: .\templates\contact.html:22 .\templates\contact.html:103
+#: .\templates\gallery.html:22 .\templates\gallery.html:151
+#: .\templates\index.html:22 .\templates\index.html:101
+#: .\templates\team.html:22 .\templates\team.html:187
 msgid "ABOUT"
 msgstr "Haqida"
 
-#: .\templates\about.html:23 .\templates\about.html:119
-#: .\templates\contact.html:23 .\templates\contact.html:102
-#: .\templates\gallery.html:23 .\templates\gallery.html:150
-#: .\templates\index.html:23 .\templates\index.html:100
-#: .\templates\team.html:23 .\templates\team.html:186
+#: .\templates\about.html:23 .\templates\about.html:121
+#: .\templates\contact.html:23 .\templates\contact.html:104
+#: .\templates\gallery.html:23 .\templates\gallery.html:152
+#: .\templates\index.html:23 .\templates\index.html:102
+#: .\templates\team.html:23 .\templates\team.html:188
 msgid "GALLERY"
-msgstr "Rasmlar"
+msgstr "Galleriya"
 
-#: .\templates\about.html:24 .\templates\about.html:120
-#: .\templates\contact.html:24 .\templates\contact.html:103
-#: .\templates\gallery.html:24 .\templates\gallery.html:151
-#: .\templates\index.html:24 .\templates\index.html:101
-#: .\templates\team.html:24 .\templates\team.html:187
+#: .\templates\about.html:24 .\templates\about.html:122
+#: .\templates\contact.html:24 .\templates\contact.html:105
+#: .\templates\gallery.html:24 .\templates\gallery.html:153
+#: .\templates\index.html:24 .\templates\index.html:103
+#: .\templates\team.html:24 .\templates\team.html:189
 msgid "TEAM"
 msgstr "Jamoa"
 
-#: .\templates\about.html:25 .\templates\about.html:121
-#: .\templates\contact.html:25 .\templates\contact.html:104
-#: .\templates\gallery.html:25 .\templates\gallery.html:152
-#: .\templates\index.html:25 .\templates\index.html:102
-#: .\templates\team.html:25 .\templates\team.html:188
+#: .\templates\about.html:25 .\templates\about.html:123
+#: .\templates\contact.html:25 .\templates\contact.html:106
+#: .\templates\gallery.html:25 .\templates\gallery.html:154
+#: .\templates\index.html:25 .\templates\index.html:104
+#: .\templates\team.html:25 .\templates\team.html:190
 msgid "CONTACT"
 msgstr "Aloqa"
 

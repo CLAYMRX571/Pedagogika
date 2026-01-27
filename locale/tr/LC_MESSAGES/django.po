@@ -16,7 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: .\menu\settings.py:123
 msgid "Uzbek"
@@ -38,7 +38,7 @@ msgstr ""
 #: .\templates\gallery.html:19 .\templates\index.html:19
 #: .\templates\team.html:19
 msgid "GLOBAL COMPETENCE EDU"
-msgstr "GLOBAL COMPETENCE EDU"
+msgstr "Küresel Yetkinlik Eğitimi"
 
 #: .\templates\about.html:22 .\templates\about.html:120
 #: .\templates\contact.html:22 .\templates\contact.html:103
@@ -46,7 +46,7 @@ msgstr "GLOBAL COMPETENCE EDU"
 #: .\templates\index.html:22 .\templates\index.html:101
 #: .\templates\team.html:22 .\templates\team.html:187
 msgid "ABOUT"
-msgstr "About"
+msgstr "Hakkımızda"
 
 #: .\templates\about.html:23 .\templates\about.html:121
 #: .\templates\contact.html:23 .\templates\contact.html:104
@@ -54,7 +54,7 @@ msgstr "About"
 #: .\templates\index.html:23 .\templates\index.html:102
 #: .\templates\team.html:23 .\templates\team.html:188
 msgid "GALLERY"
-msgstr "GALLERY"
+msgstr "Galeri"
 
 #: .\templates\about.html:24 .\templates\about.html:122
 #: .\templates\contact.html:24 .\templates\contact.html:105
@@ -62,7 +62,7 @@ msgstr "GALLERY"
 #: .\templates\index.html:24 .\templates\index.html:103
 #: .\templates\team.html:24 .\templates\team.html:189
 msgid "TEAM"
-msgstr "TEAM"
+msgstr "Ekip"
 
 #: .\templates\about.html:25 .\templates\about.html:123
 #: .\templates\contact.html:25 .\templates\contact.html:106
@@ -70,13 +70,13 @@ msgstr "TEAM"
 #: .\templates\index.html:25 .\templates\index.html:104
 #: .\templates\team.html:25 .\templates\team.html:190
 msgid "CONTACT"
-msgstr "CONTACT"
+msgstr "İletişim"
 
 #: .\templates\about.html:27 .\templates\contact.html:27
 #: .\templates\gallery.html:27 .\templates\index.html:27
 #: .\templates\team.html:27
 msgid "LANGUAGES"
-msgstr "LANGUAGES"
+msgstr "Diller"
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:16
 msgid "Messages"
