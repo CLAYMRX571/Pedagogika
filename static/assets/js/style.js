@@ -1,84 +1,52 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const wrapper = document.querySelector(".slides-wrapper");
-    const slides = document.querySelectorAll(".slide");
+document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll(".fade-up");
 
-    let index = 0;
-    const total = slides.length;
-
-    function updateSlide() {
-        wrapper.style.transform = `translateX(-${index * 100}%)`;
-    }
-
-    // Auto slide every 5 seconds
-    setInterval(() => {
-        index = (index + 1) % total;
-        updateSlide();
-    }, 5000);
-
-    // Scroll down
-    downBtn.addEventListener("click", () => {
-        window.scrollBy({
-            top: window.innerHeight,
-            behavior: "smooth"
-        });
-    });
-
-    // SEE MORE button
-    const btn = document.getElementById("seeMoreBtn");
-    const info = document.getElementById("moreInfo");
-
-    btn.addEventListener("click", () => {
-        info.style.display = info.style.display === "block" ? "none" : "block";
-        btn.textContent = info.style.display === "block" ? "HIDE INFO" : "SEE MORE ABOUT US";
-    });
-});
-
-document.getElementById('newsletterForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    const name = document.getElementById('nameInput').value.trim();
-    const email = document.getElementById('emailInput').value.trim();
-
-    if (!name || !email) {
-        alert("Iltimos, barcha maydonlarni to'ldiring!");
-        return;
-    }
-
-    alert(`Rahmat, ${name}! Sizning "${email}" pochtangiz ro'yxatdan o'tdi.`);
-
-    document.getElementById('nameInput').value = '';
-    document.getElementById('emailInput').value = '';
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    const elements = [
-        document.querySelector('.section-title'),
-        document.querySelector('.image-box'),
-        document.querySelector('.content-box')
-    ];
-
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('fade-up');
+                entry.target.classList.add("show");
             }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.2 });
 
-    elements.forEach(el => observer.observe(el));
+    items.forEach(i => observer.observe(i));
 });
 
-const circles = document.querySelectorAll(".circle");
-const infoBox = document.getElementById("infoBox");
+document.querySelectorAll('.icon').forEach(icon => { 
+    icon.addEventListener('click', function(e) { 
+        document.querySelectorAll('.icon').forEach(i => { 
+            i.classList.remove('active'); 
+        });  
+        this.classList.add('active');  
+        e.preventDefault(); 
+    }); 
+});  
 
-circles.forEach(circle => {
-    circle.addEventListener("click", () => {
-        circles.forEach(c => c.classList.remove("active"));
-        circle.classList.add("active");
+window.addEventListener('load', function() { 
+    const activePage = window.location.pathname.split('/').pop(); 
+    if (activePage === '#') { 
+        document.getElementById('brain-icon').classList.add('active'); 
+    } 
+    else if (activePage === '#') { 
+        document.getElementById('heart-icon').classList.add('active'); 
+    } 
+    else if (activePage === '#') { 
+        document.getElementById('handshake-icon').classList.add('active'); 
+    } 
+});
 
-        infoBox.innerHTML = `
-            <h3>${circle.dataset.title}</h3>
-            <p>${circle.dataset.text}</p>
-        `;
+document.addEventListener("DOMContentLoaded", () => {
+    const dropdown = document.querySelector(".lang-dropdown");
+    const btn = dropdown.querySelector(".dropdown-btn");
+
+    btn.addEventListener("click", () => {
+        dropdown.classList.toggle("active");
+    });
+
+    // tashqariga bosilsa yopilsin
+    document.addEventListener("click", (e) => {
+        if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove("active");
+        }
     });
 });

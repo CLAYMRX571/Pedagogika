@@ -6,116 +6,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shodiyeva Shohsanam Furqatovna</title>
-    <link rel="icon" href="{% static 'assets/img/edu.jpg' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'assets/img/meet.png' %}" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"  />
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
 </head>
 <body>
 
-<nav class="nav"> 
-    <div class="nav-inner">
-        <a href="{% url 'home' %}" class="brand">
-            <img src="{% static 'assets/img/edu.jpg' %}" alt="Pedagogika Logo">
-            <span>{% trans 'GLOBAL COMPETENCE EDU' %}</span>
+<div class="header fade-up">
+    <div class="logo fade-up delay-1">
+        <a href="" class="logo-link">
+            <img src="{% static 'assets/img/meet.png' %}" class="flag">
+            <span>Global Competence EDU</span>
+        </a>  
+    </div>
+    <div class="header-right fade-up delay-2">
+        <div class="lang-options fade-up delay-3">
+            <a href=""><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> Uzbek</a>
+            <a href=""><img src="{% static 'assets/img/ru.png' %}" width="24" height="16"> Russian</a>
+            <a href=""><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> English</a>
+            <a href=""><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> Turkcha</a>
+        </div>
+        <div class="auth-buttons fade-up delay-3">
+            <button>Login</button>
+            <button>Register</button>
+        </div>
+    </div>
+</div>
+
+<section class="hero">
+    <div class="world-map zoom-in delay-1"></div>
+    <div class="icons-container zoom-in delay-1"> 
+        <a href="#" class="icon brain-icon">
+            <img src="{% static 'assets/img/brain.png' %}" alt="brain">
         </a>
-        <div class="nav-links">
-            <a href="{% url 'about' %}">{% trans 'ABOUT' %}</a>  
-            <a href="{% url 'gallery' %}">{% trans 'GALLERY' %}</a> 
-            <a href="{% url 'team' %}">{% trans 'TEAM' %}</a> 
-            <a href="{% url 'contact' %}">{% trans 'CONTACT' %}</a>  
-            <div class="lang-wrapper">
-                <a class="lang-toggle">{% trans 'LANGUAGES' %}</a> 
-                <div class="lang-dropdown"> 
-                    <a href="{% url 'lan_switch' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> UZ</a> 
-                    <a href="{% url 'lan_switch' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> EN</a> 
-                    <a href="{% url 'lan_switch' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> TR</a> 
-                    <a href="{% url 'lan_switch' 'ru' %}"><img src="{% static 'assets/img/ru.png' %}" width="24" height="16"> RU</a> 
-                </div> 
-            </div> 
-        </div>
-    </div>
-</nav>
+        <a href="#" class="icon heart-icon">
+            <img src="{% static 'assets/img/health.png' %}" alt="heart">
+        </a>
+        <a href="#" class="icon handshake-icon">
+            <img src="{% static 'assets/img/handshake.png' %}" alt="handshake">
+        </a>
+    </div> 
+</section>
 
-<div class="hero-slider"> 
-    <div class="overlay"></div>
-    <div class="slides-wrapper">
-        {% for item in home %}
-        <div class="slide">
-            <h2>{{ item.title }}</h2> 
-            <p>{{ item.text | safe}}</p> 
+<section class="features-grid">
+    <a href="" class="feature-card zoom-in delay-1 row-layout">
+        <div class="feature-icon zoom-in delay-1">
+            <i class="fa-solid fa-file-lines"></i>
+        </div>
+        <h3> Scientific Research</h3>
+    </a>
+    <a href="" class="feature-card zoom-in delay-2 row-layout">
+        <div class="feature-icon zoom-in delay-2">
+            <i class="fa-solid fa-play"></i>
+        </div>
+        <h3> Pedagogical Mechanisms</h3>
+    </a>
+    <a href="" class="feature-card zoom-in delay-3 row-layout">
+        <div class="feature-icon zoom-in delay-3">
+            <i class="fa-solid fa-chart-pie"></i>
+        </div>
+        <h3> Competence Model</h3>
+    </a>
+    <a href="" class="feature-card zoom-in delay-4 row-layout">
+        <div class="feature-icon zoom-in delay-4">
+            <i class="fa-solid fa-lightbulb"></i>
+        </div>
+        <h3>Student Activities</h3>
+    </a>
+    <a href="" class="feature-card zoom-in delay-5 row-layout">
+        <div class="feature-icon zoom-in delay-5">
+            <i class="fa-solid fa-chart-bar"></i>
+        </div>
+        <h3> Monitoring & Assessment</h3>
+    </a>
+    <a href="" class="feature-card zoom-in delay-1 row-layout">
+        <div class="feature-icon zoom-in delay-1">
+            <i class="fa-solid fa-video"></i>
+        </div>
+        <h3> Multimedia & Gamification</h3>
+    </a>
+</section>
+
+<div class="edu-banner"> 
+    <div class="banner-content"> 
+        <div class="text-container"> 
+            <span class="dash"></span> 
+            <span class="text">Developed on the basis of scientific and pedagogical innovations</span> 
+            <span class="dash"></span> 
         </div> 
-        {% endfor %}
-    </div>
-</div>
-
-<div class="banner">
-    <div class="banner-left"></div>
-    <div class="banner-middle">
-        <h1>WE WILL OPEN THE WORLD OF KNOWLEDGE FOR YOU</h1>
-        <p class="subtitle">KNOWLEDGE | HARD WORK | INTELLIGENCE</p>
-        <a href="{% url 'about' %}" id="seeMoreBtn">SEE MORE ABOUT US</a>
-    </div>
-    <div class="banner-right">
-        <div class="info-box" id="infoBox">
-            <h3>Knowledge</h3>
-            <p>Education opens doors to endless opportunities.</p>
+        <div class="lang-options fade-up delay-3">
+            <a href=""><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> Uzbek</a>
+            <a href=""><img src="{% static 'assets/img/ru.png' %}" width="24" height="16"> Russian</a>
+            <a href=""><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> English</a>
+            <a href=""><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> Turkcha</a>
         </div>
-    </div>
+    </div> 
 </div>
-
-<div class="stats-container">
-    <div class="stat-card">
-        <div class="stat-number">1700</div>
-        <div class="stat-label">Laudantium</div>
-    </div>
-    <div class="stat-card">
-        <div class="stat-number">2406</div>
-        <div class="stat-label">Doloremque</div>
-    </div>
-    <div class="stat-card">
-        <div class="stat-number">2405</div>
-        <div class="stat-label">Perspiciatis</div>
-    </div>
-</div>
-
-<div class="newsletter-container">
-    <h1 class="newsletter-title">NEWSLETTER</h1>
-    <p class="newsletter-subtitle"> Nemo enim ipsum voluptatem quia voluptas sit aspernatur aut odit aut fugit </p>
-    <form id="newsletterForm" onsubmit="return false;">
-        <div class="form-group">
-            <div class="input-wrapper">
-                <span class="input-icon"><i class='fa-solid fa-user'></i></span>
-                <input type="text" placeholder="Name" id="nameInput" required>
-            </div>
-            <div class="input-wrapper">
-                <span class="input-icon"><i class='fa-solid fa-envelope'></i></span>
-                <input type="email" placeholder="Email" id="emailInput" required>
-            </div>
-            <button type="button" class="subscribe-btn">SUBSCRIBE NOW</button>
-        </div>
-    </form>
-</div>
-
-<footer class="footer-container">
-    <nav class="footer-nav">
-        <a href="{% url 'about' %}">{% trans 'ABOUT' %}</a>
-        <a href="{% url 'gallery' %}">{% trans 'GALLERY' %}</a>
-        <a href="{% url 'team' %}">{% trans 'TEAM' %}</a>
-        <a href="{% url 'contact' %}">{% trans 'CONTACT' %}</a>
-    </nav>
-
-    <div class="footer-contact">
-        <i class='fa-solid fa-phone'></i>
-        <span>+998900155727</span>
-    </div>
-
-    <div class="social-icons">
-        <a href="https://www.facebook.com/utas.uz" target="_blank"><i class='fa-brands fa-facebook'></i></a>
-        <a href="https://www.instagram.com/shohsanam_sh_m" target="_blank"><i class='fa-brands fa-instagram'></i></a>
-        <a href="https://www.linkedin.com/company/utasuz" target="_blank"><i class='fa-brands fa-linkedin'></i></a>
-        <a href="https://www.youtube.com/@utasuz" target="_blank"><i class='fa-brands fa-youtube'></i></a>
-    </div>
-</footer>
 
 <script src="{% static 'assets/js/script.js' %}"></script>
 </body>
