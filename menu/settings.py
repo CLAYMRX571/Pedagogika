@@ -46,11 +46,17 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_ckeditor_5',
 
+    'apps.accounts',
+    'apps.brain',
+    'apps.handshake',
+    'apps.health',
     'apps.home',
-    'apps.about',
-    'apps.contact',
-    'apps.gallery',
-    'apps.team',
+    'apps.model',
+    'apps.monitor',
+    'apps.multimedia',
+    'apps.pedagogical',
+    'apps.research',
+    'apps.student',
 ]
 
 MIDDLEWARE = [
@@ -135,11 +141,17 @@ MODELTRANSLATION_FALLBACK_LANGUAGES = {'default':('en', 'uz'), 'uz':('en',), 'en
 MODELTRANSLATION_PREPOPULATE_LANGUAGE = 'uz'
 
 MODELTRANSLATION_TRANSLATION_FILES = (
+    'apps.accounts.translations',
+    'apps.brain.translations',
+    'apps.handshake.translations',
+    'apps.health.translations',
     'apps.home.translations',
-    'apps.about.translations',
-    'apps.contact.translations',
-    'apps.gallery.translations',
-    'apps.team.translations',
+    'apps.model.translations',
+    'apps.monitor.translations',
+    'apps.multimedia.translations',
+    'apps.pedagogical.translations',
+    'apps.research.translations',
+    'apps.student.translations',
 )
 
 # Internationalization
