@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Home
 
 def Homeviews(request):
-    home = list(Home.objects.all())
+    home = Home.objects.first()
 
     context = {
         'home': home,

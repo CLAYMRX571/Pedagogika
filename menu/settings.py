@@ -298,6 +298,11 @@ JAZZMIN_SETTINGS = {
         "auth.group": "fas fa-users",
         "auth.user": "fa fa-user",
         "home.home": "fa fa-home",
+        "accounts.accounts": "fa fa-user-lock",
+        "monitor.monitor": "fas fa-desktop",
+        "pedagogical.pedagogical": "fas fa-person",
+        "research.research": "fas fa-magnifying-glass",
+        "student.student": "fas fa-graduation-cap",
     },
     # Icons that are used when one is not manually specified
     "default_icon_parents": "fas fa-chevron-circle-right",

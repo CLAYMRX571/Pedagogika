@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shodiyeva Shohsanam Furqatovna</title>
+    <title>{% trans 'Shodiyeva Shohsanam Furqatovna' %}</title>
     <link rel="icon" href="{% static 'assets/img/meet.png' %}" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"  />
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
@@ -14,21 +14,21 @@
 
 <div class="header fade-up">
     <div class="logo fade-up delay-1">
-        <a href="" class="logo-link">
+        <a href="{% url 'home' %}" class="logo-link">
             <img src="{% static 'assets/img/meet.png' %}" class="flag">
-            <span>Global Competence EDU</span>
+            <span>{% trans 'Global Competence EDU' %}</span>
         </a>  
     </div>
     <div class="header-right fade-up delay-2">
         <div class="lang-options fade-up delay-3">
-            <a href="{% url 'lan_switch' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> Uzbek</a>
-            <a href="{% url 'lan_switch' 'ru' %}"><img src="{% static 'assets/img/ru.png' %}" width="24" height="16"> Russian</a>
-            <a href="{% url 'lan_switch' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> English</a>
-            <a href="{% url 'lan_switch' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> Turkcha</a>
+            <a href="{% url 'lan_switch' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">{% trans 'Uzbek' %}</a>
+            <a href="{% url 'lan_switch' 'ru' %}"><img src="{% static 'assets/img/ru.png' %}" width="24" height="16">{% trans 'Russian' %}</a>
+            <a href="{% url 'lan_switch' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16">{% trans 'English' %}</a>
+            <a href="{% url 'lan_switch' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16">{% trans 'Turkcha' %}</a>
         </div>
         <div class="auth-buttons fade-up delay-3">
-            <button>Login</button>
-            <button>Register</button>
+            <button>{% trans 'Login' %}</button>
+            <button>{% trans 'Register' %}</button>
         </div>
     </div>
 </div>
@@ -53,37 +53,37 @@
         <div class="feature-icon zoom-in delay-1">
             <i class="fa-solid fa-file-lines"></i>
         </div>
-        <h3> Scientific Research</h3>
+        <h3> {{ home.research_name }}</h3>
     </a>
     <a href="{% url 'pedagogical' %}" class="feature-card zoom-in delay-2 row-layout">
         <div class="feature-icon zoom-in delay-2">
             <i class="fa-solid fa-play"></i>
         </div>
-        <h3> Pedagogical Mechanisms</h3>
+        <h3> {{ home.pedagogical_name }}</h3>
     </a>
     <a href="{% url 'model' %}" class="feature-card zoom-in delay-3 row-layout">
         <div class="feature-icon zoom-in delay-3">
             <i class="fa-solid fa-chart-pie"></i>
         </div>
-        <h3> Competence Model</h3>
+        <h3> {{ home.model_name }}</h3>
     </a>
     <a href="{% url 'student' %}" class="feature-card zoom-in delay-4 row-layout">
         <div class="feature-icon zoom-in delay-4">
             <i class="fa-solid fa-lightbulb"></i>
         </div>
-        <h3>Student Activities</h3>
+        <h3> {{ home.student_name }}</h3>
     </a>
     <a href="{% url 'monitor' %}" class="feature-card zoom-in delay-5 row-layout">
         <div class="feature-icon zoom-in delay-5">
             <i class="fa-solid fa-chart-bar"></i>
         </div>
-        <h3> Monitoring & Assessment</h3>
+        <h3> {{ home.monitor_name }}</h3>
     </a>
     <a href="{% url 'multimedia' %}" class="feature-card zoom-in delay-1 row-layout">
         <div class="feature-icon zoom-in delay-1">
             <i class="fa-solid fa-video"></i>
         </div>
-        <h3> Multimedia & Gamification</h3>
+        <h3>{{ home.multimedia_name }}</h3>
     </a>
 </section>
 
@@ -91,14 +91,14 @@
     <div class="banner-content"> 
         <div class="text-container"> 
             <span class="dash"></span> 
-            <span class="text">Shodiyeva Shohsanam Furqatovna</span> 
+            <span class="text">{% trans 'Shodiyeva Shohsanam Furqatovna' %}</span> 
             <span class="dash"></span> 
         </div> 
         <div class="lang-options fade-up delay-3">
-            <a href="{% url 'lan_switch' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> Uzbek</a>
-            <a href="{% url 'lan_switch' 'ru' %}"><img src="{% static 'assets/img/ru.png' %}" width="24" height="16"> Russian</a>
-            <a href="{% url 'lan_switch' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> English</a>
-            <a href="{% url 'lan_switch' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> Turkcha</a>
+            <a href="{% url 'lan_switch' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">{% trans 'Uzbek' %}</a>
+            <a href="{% url 'lan_switch' 'ru' %}"><img src="{% static 'assets/img/ru.png' %}" width="24" height="16">{% trans 'Russian' %}</a>
+            <a href="{% url 'lan_switch' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16">{% trans 'English' %}</a>
+            <a href="{% url 'lan_switch' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16">{% trans 'Turkcha' %}</a>
         </div>
     </div> 
 </div>

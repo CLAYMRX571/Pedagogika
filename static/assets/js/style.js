@@ -34,19 +34,3 @@ window.addEventListener('load', function() {
         document.getElementById('handshake-icon').classList.add('active'); 
     } 
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-    const dropdown = document.querySelector(".lang-dropdown");
-    const btn = dropdown.querySelector(".dropdown-btn");
-
-    btn.addEventListener("click", () => {
-        dropdown.classList.toggle("active");
-    });
-
-    // tashqariga bosilsa yopilsin
-    document.addEventListener("click", (e) => {
-        if (!dropdown.contains(e.target)) {
-            dropdown.classList.remove("active");
-        }
-    });
-});
