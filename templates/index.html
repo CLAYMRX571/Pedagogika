@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% trans 'Shodiyeva Shohsanam Furqatovna' %}</title>
-    <link rel="icon" href="{% static 'assets/img/meet.png' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'assets/img/edu.png' %}" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"  />
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
 </head>
@@ -15,7 +15,7 @@
 <div class="header fade-up">
     <div class="logo fade-up delay-1">
         <a href="{% url 'home' %}" class="logo-link">
-            <img src="{% static 'assets/img/meet.png' %}" class="flag">
+            <img src="{% static 'assets/img/edu.png' %}" class="flag">
             <span>{% trans 'Global Competence EDU' %}</span>
         </a>  
     </div>
@@ -40,10 +40,10 @@
             <img src="{% static 'assets/img/brain.png' %}" alt="brain">
         </a>
         <a href="{% url 'health' %}" class="icon heart-icon">
-            <img src="{% static 'assets/img/health.png' %}" alt="heart">
+            <img src="{% static 'assets/img/love.png' %}" alt="heart">
         </a>
         <a href="{% url 'handshake' %}" class="icon handshake-icon">
-            <img src="{% static 'assets/img/handshake.png' %}" alt="handshake">
+            <img src="{% static 'assets/img/meet.png' %}" alt="handshake">
         </a>
     </div> 
 </section>
@@ -51,37 +51,37 @@
 <section class="features-grid">
     <a href="{% url 'research' %}" class="feature-card zoom-in delay-1 row-layout">
         <div class="feature-icon zoom-in delay-1">
-            <i class="fa-solid fa-file-lines"></i>
+            <img src="{% static 'assets/img/icons.png' %}" class="feature-img">
         </div>
         <h3> {{ home.research_name }}</h3>
     </a>
     <a href="{% url 'pedagogical' %}" class="feature-card zoom-in delay-2 row-layout">
         <div class="feature-icon zoom-in delay-2">
-            <i class="fa-solid fa-play"></i>
+            <img src="{% static 'assets/img/icons1.png' %}" class="feature-img">
         </div>
         <h3> {{ home.pedagogical_name }}</h3>
     </a>
     <a href="{% url 'model' %}" class="feature-card zoom-in delay-3 row-layout">
         <div class="feature-icon zoom-in delay-3">
-            <i class="fa-solid fa-chart-pie"></i>
+            <img src="{% static 'assets/img/icons2.png' %}" class="feature-img">
         </div>
         <h3> {{ home.model_name }}</h3>
     </a>
     <a href="{% url 'student' %}" class="feature-card zoom-in delay-4 row-layout">
         <div class="feature-icon zoom-in delay-4">
-            <i class="fa-solid fa-lightbulb"></i>
+            <img src="{% static 'assets/img/icons3.png' %}" class="feature-img">
         </div>
         <h3> {{ home.student_name }}</h3>
     </a>
     <a href="{% url 'monitor' %}" class="feature-card zoom-in delay-5 row-layout">
         <div class="feature-icon zoom-in delay-5">
-            <i class="fa-solid fa-chart-bar"></i>
+            <img src="{% static 'assets/img/icons4.png' %}" class="feature-img">
         </div>
         <h3> {{ home.monitor_name }}</h3>
     </a>
     <a href="{% url 'multimedia' %}" class="feature-card zoom-in delay-1 row-layout">
         <div class="feature-icon zoom-in delay-1">
-            <i class="fa-solid fa-video"></i>
+            <img src="{% static 'assets/img/icons5.png' %}" class="feature-img">
         </div>
         <h3>{{ home.multimedia_name }}</h3>
     </a>

@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shodiyeva Shohsanam Furqatovna</title>
-    <link rel="icon" href="{% static 'assets/img/meet.png' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'assets/img/edu.png' %}" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"  />
     <link rel="stylesheet" href="{% static 'assets/css/research.css' %}">
 </head>
@@ -15,7 +15,7 @@
 <div class="header fade-up">
     <div class="logo fade-up delay-1">
         <a href="{% url 'home' %}" class="logo-link">
-            <img src="{% static 'assets/img/meet.png' %}" class="flag">
+            <img src="{% static 'assets/img/edu.png' %}" class="flag">
             <span>Global Competence EDU</span>
         </a>  
     </div>
@@ -56,72 +56,96 @@
         </div> 
     </header> 
     <div class="title"> 
-        <img src="{% static 'assets/img/micro.png' %}" alt="Mikroskop"> 
+        <div class="icon-circle">
+            <img src="{% static 'assets/img/microscop.png' %}" alt="Microscop"> 
+        </div>
         <h1>Ilmiy Tadqiqotlar</h1> 
     </div> 
     <div class="cards"> 
         <div class="card"> 
-            <h2>Ilmiy Maqolalar</h2> 
-            <p>PDF/DOC formatdagi ilmiy maqolalar, dissertatsiyalar...</p> 
-            <ul> 
-                <li>Deardorff (2009) 'Madinaviy Kompetensiya'</li> 
-                <li>OECD (2023) 'Global Kompetensiya Dasturi'</li> 
+            <div class="card-header">
+                <img src="{% static 'assets/img/doc.png' %}" alt="Ilmiy maqola">
+                <div class="header-text">
+                    <h2>Ilmiy Maqolalar</h2> 
+                    <p>PDF/DOC formatdagi ilmiy maqolalar, dissertatsiyalar</p> 
+                </div>
+            </div>
+            <ul class="card-list"> 
+                <li>Deardorff 'Madinaviy Kompetensiya'</li> 
+                <li>OECD 'Global Kompetensiya Dasturi'</li> 
             </ul> 
             <div class="buttons"> 
-                <button class="btn btn-download">Yuklab olish</button> 
-                <button class="btn btn-read">Qo'shimcha o'qish</button> 
+                <a href="" target="_blank" class="btn btn-download" download><i class='fa-solid fa-download'></i>Yuklab olish</a> 
+                <a href="" target="_blank" class="btn btn-read"><i class='fa-brands fa-readme'></i>Qo'shimcha o'qish</a>  
             </div> 
         </div> 
         <div class="card"> 
-            <h2>Statistik Ma'lumotlar</h2> 
+            <div class="card-header">
+                <img src="{% static 'assets/img/book.png' %}" alt="Statistik Ma'lumotlar">
+                <h2>Statistik Ma'lumotlar</h2> 
+            </div>
             <p>Tahlil qilingan ma'lumotlar, diagrammalar, infografikalar</p> 
             <ul> 
-                <li>UNESCO 2025 yilgi hisoboti (interaktiv xarita)</li> 
+                <li>UNESCO 2025 yilgi hisoboti</li> 
                 <li>Excel/PowerBI orqali vizualashtirilgan statistika</li> 
             </ul> 
             <div class="buttons"> 
-                <button class="btn btn-download">Yuklab olish</button> 
-                <button class="btn btn-read">Qo'shimcha o'qish</button> 
+                <a href="" target="_blank" class="btn btn-download" download><i class='fa-solid fa-download'></i>Yuklab olish</a> 
+                <a href="" target="_blank" class="btn btn-read"><i class='fa-brands fa-readme'></i>Qo'shimcha o'qish</a>  
             </div> 
         </div> 
         <div class="card"> 
-            <h2>Tadqiqot Metodlari</h2> 
+            <div class="card-header">
+                <img src="{% static 'assets/img/book.png' %}" alt="Tadqiqot metodlari">
+                <h2>Tadqiqot Metodlari</h2> 
+            </div>
             <p>Sorovnomalar, testlar, intervyu shablonlari</p> 
             <ul> 
                 <li>Kvalitativ tadqiqot uchun "Open-ended Question"</li> 
                 <li>Miqdoriy tadqiqot uchun "Likert Scale" testi</li> 
             </ul> 
             <div class="buttons"> 
-                <button class="btn btn-download">Yuklab olish</button> 
-                <button class="btn btn-read">Qo'shimcha o'qish</button> 
+                <a href="" target="_blank" class="btn btn-download" download><i class='fa-solid fa-download'></i>Yuklab olish</a> 
+                <a href="" target="_blank" class="btn btn-read"><i class='fa-brands fa-readme'></i>Qo'shimcha o'qish</a>  
             </div> 
         </div> 
         <div class="card"> 
-            <h2>Dissertatsiya Namunalari</h2> 
+            <div class="card-header">
+                <img src="{% static 'assets/img/book.png' %}" alt="Dissertatsiya Namunalari">
+                <h2>Dissertatsiya Namunalari</h2>
+            </div> 
             <p>Toliq dissertatsiya va tezislar</p> 
             <ul> 
-                <li>Harvard Universiteti (2024) "Madinaviy Intellekt Global Jamoalarda"</li> 
-                <li>O'zbekiston Milliy Universiteti (2025) "Madinaviylararo Kompetentlik: O'zbekiston Modeli"</li> 
+                <li>Harvard Universiteti "Madinaviy Intellekt Global Jamoalarda"</li> 
+                <li>O'zbekiston Milliy Universiteti</li> 
+                <li>"Madinaviylararo Kompetentlik: O'zbekiston Modeli"</li> 
             </ul> 
             <div class="buttons"> 
-                <button class="btn btn-download">Yuklab olish</button> 
-                <button class="btn btn-read">Qo'shimcha o'qish</button> 
+                <a href="" target="_blank" class="btn btn-download" download><i class='fa-solid fa-download'></i>Yuklab olish</a> 
+                <a href="" target="_blank" class="btn btn-read"><i class='fa-brands fa-readme'></i>Qo'shimcha o'qish</a> 
             </div> 
         </div> 
         <div class="card"> 
-            <h2>Nazariy Asoslar</h2> 
+            <div class="card-header">
+                <img src="{% static 'assets/img/brains.png' %}" alt="Nazariy Asoslar">
+                <h2>Nazariy Asoslar</h2> 
+            </div>
             <p>Deardorff, OECD, UNESCO yondashuvlari</p> 
             <ul> 
-                <li>Deardorff modeli (animatsiya orqali Tushuntirilgan)</li> 
+                <li>Deardorff modeli (animatsiya orqali tushuntirilgan)</li> 
                 <li>OECD Global Kompetensiya Dasturi (interaktiv test)</li> 
+                <li>foydalanuvchi hozir muhokama qilmoqda</li> 
             </ul> 
             <div class="buttons"> 
-                <button class="btn btn-download">Yuklab olish</button> 
-                <button class="btn btn-read">Qo'shimcha o'qish</button> 
+                <a href="" target="_blank" class="btn btn-download" download><i class='fa-solid fa-download'></i>Yuklab olish</a> 
+                <a href="" target="_blank" class="btn btn-read"><i class='fa-brands fa-readme'></i>Qo'shimcha o'qish</a> 
             </div> 
         </div> 
         <div class="card"> 
-            <h2>Ilmiy Forum</h2> 
+            <div class="card-header">
+                <img src="{% static 'assets/img/book.png' %}" alt="Ilmiy Forum">
+                <h2>Ilmiy Forum</h2> 
+            </div>
             <p>Savol-javob, muhokama, ekspert fikri</p> 
             <ul> 
                 <li>Mavzu: "Madinaviylararo konfliktlarni hal qilish"</li> 
@@ -129,7 +153,7 @@
                 <li>3 ta foydalanuvchi hozir muhokama qilmoqda</li> 
             </ul> 
             <div class="buttons"> 
-                <button class="btn btn-download">Muhokama qilish</button> 
+                <a href="" target="_blank" class="btn btn-download"><i class='fa-solid fa-comment-sms'></i>Muhokama qilish</a> 
             </div> 
         </div> 
     </div> 
