@@ -1,74 +1,13 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const wrapper = document.querySelector(".slides-wrapper");
-    const slides = document.querySelectorAll(".slide");
+document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll(".fade-up");
 
-    let index = 0;
-    const total = slides.length;
-
-    function updateSlide() {
-        wrapper.style.transform = `translateX(-${index * 100}%)`;
-    }
-
-    // Auto slide every 5 seconds
-    setInterval(() => {
-        index = (index + 1) % total;
-        updateSlide();
-    }, 5000);
-
-    // Scroll down
-    downBtn.addEventListener("click", () => {
-        window.scrollBy({
-            top: window.innerHeight,
-            behavior: "smooth"
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
         });
-    });
+    }, { threshold: 0.2 });
 
-    // SEE MORE button
-    const btn = document.getElementById("seeMoreBtn");
-    const info = document.getElementById("moreInfo");
-
-    btn.addEventListener("click", () => {
-        info.style.display = info.style.display === "block" ? "none" : "block";
-        btn.textContent = info.style.display === "block" ? "HIDE INFO" : "SEE MORE ABOUT US";
-    });
-});
-
-document.getElementById('newsletterForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    const name = document.getElementById('nameInput').value.trim();
-    const email = document.getElementById('emailInput').value.trim();
-
-    if (!name || !email) {
-        alert("Iltimos, barcha maydonlarni to'ldiring!");
-        return;
-    }
-
-    alert(`Rahmat, ${name}! Sizning "${email}" pochtangiz ro'yxatdan o'tdi.`);
-
-    document.getElementById('nameInput').value = '';
-    document.getElementById('emailInput').value = '';
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    const elements = [
-    document.querySelector('h2'),
-    document.querySelector('p'),
-    document.querySelector('.divider'),
-    ...document.querySelectorAll('.feature')
-    ];
-
-    const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-        entry.target.classList.add('fade-up');
-        }
-    });
-    }, {
-    threshold: 0.1
-    });
-
-    elements.forEach(el => {
-    observer.observe(el);
-    });
+    items.forEach(i => observer.observe(i));
 });

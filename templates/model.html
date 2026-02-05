@@ -6,25 +6,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shodiyeva Shohsanam Furqatovna</title>
-    <link rel="icon" href="{% static 'assets/img/meet.png' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'assets/img/edu.png' %}" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"  />
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/model.css' %}">
 </head>
 <body>
 
 <div class="header fade-up">
     <div class="logo fade-up delay-1">
         <a href="{% url 'home' %}" class="logo-link">
-            <img src="{% static 'assets/img/meet.png' %}" class="flag">
+            <img src="{% static 'assets/img/edu.png' %}" class="flag">
             <span>Global Competence EDU</span>
         </a>  
     </div>
     <div class="header-right fade-up delay-2">
         <div class="lang-options fade-up delay-3">
-            <a href="{% url 'lan_switch_brain' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> Uzbek</a>
-            <a href="{% url 'lan_switch_brain' 'ru' %}"><img src="{% static 'assets/img/ru.png' %}" width="24" height="16"> Russian</a>
-            <a href="{% url 'lan_switch_brain' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> English</a>
-            <a href="{% url 'lan_switch_brain' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> Turkcha</a>
+            <a href="{% url 'lan_switch_model' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> Uzbek</a>
+            <a href="{% url 'lan_switch_model' 'ru' %}"><img src="{% static 'assets/img/ru.png' %}" width="24" height="16"> Russian</a>
+            <a href="{% url 'lan_switch_model' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> English</a>
+            <a href="{% url 'lan_switch_model' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> Turkcha</a>
         </div>
         <div class="auth-buttons fade-up delay-3">
             <button>Login</button>
@@ -32,6 +32,101 @@
         </div>
     </div>
 </div>
+
+<div class="container"> 
+    <div class="container-bg"></div>
+    <header> 
+        <h1>Kompetentlik modeli</h1> 
+        <p>Talabaning global va madaniyatlararo kompetentligini baholash</p> 
+    </header> 
+    <div class="components"> 
+        <div class="component kognitiv"> 
+            <h2>Kognitiv komponent</h2> 
+            <ul class="check-list"> 
+                <li>
+                    <img src="{% static 'assets/img/check.png' %}" alt="check">
+                    <span> Global muammolar bo'yicha bilimlar</span>
+                </li>
+                <li>
+                    <img src="{% static 'assets/img/check.png' %}" alt="check">
+                    <span> Madaniyatlararo tushunchalar</span>
+                </li>
+            </ul> 
+            <a href="" class="btn"><i class='fa-solid fa-download'></i>Yuklab olish</a> 
+        </div> 
+        <div class="component affektiv"> 
+            <h2>Affektiv komponent</h2> 
+            <ul class="check-list"> 
+                <li>
+                    <img src="{% static 'assets/img/check.png' %}" alt="check">
+                    <span> Tolerantlik</span>
+                </li>
+                <li>
+                    <img src="{% static 'assets/img/check.png' %}" alt="check">
+                    <span> Empatiya</span>
+                </li>
+                <li>
+                    <img src="{% static 'assets/img/check.png' %}" alt="check">
+                    <span> Ochiqlik</span>
+                </li>
+            </ul> 
+            <a href="" class="btn"><i class='fa-solid fa-download'></i>Yuklab olish</a>  
+        </div> 
+        <div class="component xulq-atvor"> 
+            <h2>Xulq-atvor komponenti</h2> 
+            <ul class="check-list"> 
+                <li>
+                    <img src="{% static 'assets/img/check.png' %}" alt="check">
+                    <span> Muloqot ko'nikmalari</span>
+                </li>
+                <li>
+                    <img src="{% static 'assets/img/check.png' %}" alt="check">
+                    <span> Hamkorlik</span>
+                </li>
+                <li>
+                    <img src="{% static 'assets/img/check.png' %}" alt="check">
+                    <span> Konfliktni boshqarish </span>
+                </li>
+            </ul> 
+            <a href="" class="btn"><i class='fa-solid fa-download'></i>Yuklab olish</a> 
+        </div> 
+    </div> 
+    <div class="content"> 
+        <div class="content-section"> 
+            <h3>Interaktiv radar diagramma</h3> 
+            <div class="legend"> 
+                <div class="legend-item"> 
+                    <span class="legend-color blue"></span> Bilimlar
+                </div> 
+                <div class="legend-item"> 
+                    <span class="legend-color red"></span> Munosabatlar
+                </div> 
+                <div class="legend-item"> 
+                    <span class="legend-color green"></span> Ko'nikmalar
+                </div> 
+            </div> 
+            <a href="" class="btn"><i class='fa-solid fa-chart-column'></i>Interaktiv radar diagramma</a> 
+        </div> 
+        <div class="radar-container"> 
+            <img src="{% static 'assets/img/diagram.png' %}" alt="Radar diagram" class="card-img">
+            <div class="icon-heading">
+                <div class="icon-rectangle">
+                    <i class='fa-solid fa-chart-column'></i>
+                    <span>Interaktiv radar diagramma</span>
+                </div>
+            </div>
+        </div> 
+        <div class="self-assessment"> 
+            <img src="{% static 'assets/img/test.png' %}" alt="Self assessment" class="card-img">
+            <div class="icon-heading">
+                <div class="icon-rectangle">
+                    <i class="fa-solid fa-folder"></i>
+                    <span>Self-assesment testlar</span>
+                </div>
+            </div>
+        </div> 
+    </div> 
+</div> 
 
 <div class="edu-banner"> 
     <div class="banner-content"> 
@@ -41,14 +136,14 @@
             <span class="dash"></span> 
         </div> 
         <div class="lang-options fade-up delay-3">
-            <a href="{% url 'lan_switch_brain' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> Uzbek</a>
-            <a href="{% url 'lan_switch_brain' 'ru' %}"><img src="{% static 'assets/img/ru.png' %}" width="24" height="16"> Russian</a>
-            <a href="{% url 'lan_switch_brain' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> English</a>
-            <a href="{% url 'lan_switch_brain' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> Turkcha</a>
+            <a href="{% url 'lan_switch_model' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> Uzbek</a>
+            <a href="{% url 'lan_switch_model' 'ru' %}"><img src="{% static 'assets/img/ru.png' %}" width="24" height="16"> Russian</a>
+            <a href="{% url 'lan_switch_model' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> English</a>
+            <a href="{% url 'lan_switch_model' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> Turkcha</a>
         </div>
     </div> 
 </div>
 
-<script src="{% static 'assets/js/script.js' %}"></script>
+<script src="{% static 'assets/js/model.js' %}"></script>
 </body>
 </html>

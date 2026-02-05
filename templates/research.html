@@ -21,10 +21,10 @@
     </div>
     <div class="header-right fade-up delay-2">
         <div class="lang-options fade-up delay-3">
-            <a href="{% url 'lan_switch_brain' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> Uzbek</a>
-            <a href="{% url 'lan_switch_brain' 'ru' %}"><img src="{% static 'assets/img/ru.png' %}" width="24" height="16"> Russian</a>
-            <a href="{% url 'lan_switch_brain' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> English</a>
-            <a href="{% url 'lan_switch_brain' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> Turkcha</a>
+            <a href="{% url 'lan_switch_research' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> Uzbek</a>
+            <a href="{% url 'lan_switch_research' 'ru' %}"><img src="{% static 'assets/img/ru.png' %}" width="24" height="16"> Russian</a>
+            <a href="{% url 'lan_switch_research' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> English</a>
+            <a href="{% url 'lan_switch_research' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> Turkcha</a>
         </div>
         <div class="auth-buttons fade-up delay-3">
             <button>Login</button>
@@ -71,8 +71,8 @@
                 </div>
             </div>
             <ul class="card-list"> 
-                <li>Deardorff 'Madinaviy Kompetensiya'</li> 
-                <li>OECD 'Global Kompetensiya Dasturi'</li> 
+                <li>Deardorff (2009) 'Madinaviy Kompetensiya'</li> 
+                <li>OECD (2023) 'Global Kompetensiya Dasturi'</li> 
             </ul> 
             <div class="buttons"> 
                 <a href="" target="_blank" class="btn btn-download" download><i class='fa-solid fa-download'></i>Yuklab olish</a> 
@@ -81,12 +81,14 @@
         </div> 
         <div class="card"> 
             <div class="card-header">
-                <img src="{% static 'assets/img/book.png' %}" alt="Statistik Ma'lumotlar">
-                <h2>Statistik Ma'lumotlar</h2> 
+                <img src="{% static 'assets/img/monitor.png' %}" alt="Statistik Ma'lumotlar">
+                <div class="header-text">
+                    <h2>Statistik Ma'lumotlar</h2> 
+                    <p>Tahlil qilingan ma'lumotlar, diagrammalar, infografikalar</p>
+                </div> 
             </div>
-            <p>Tahlil qilingan ma'lumotlar, diagrammalar, infografikalar</p> 
-            <ul> 
-                <li>UNESCO 2025 yilgi hisoboti</li> 
+            <ul class="card-list"> 
+                <li>UNESCO 2025 yilgi hisoboti (interaktiv xarita)</li> 
                 <li>Excel/PowerBI orqali vizualashtirilgan statistika</li> 
             </ul> 
             <div class="buttons"> 
@@ -96,11 +98,13 @@
         </div> 
         <div class="card"> 
             <div class="card-header">
-                <img src="{% static 'assets/img/book.png' %}" alt="Tadqiqot metodlari">
-                <h2>Tadqiqot Metodlari</h2> 
+                <img src="{% static 'assets/img/analiz.png' %}" alt="Tadqiqot metodlari">
+                <div class="header-text">
+                    <h2>Tadqiqot Metodlari</h2> 
+                    <p>Sorovnomalar, testlar, intervyu shablonlari</p> 
+                </div>
             </div>
-            <p>Sorovnomalar, testlar, intervyu shablonlari</p> 
-            <ul> 
+            <ul class="card-list"> 
                 <li>Kvalitativ tadqiqot uchun "Open-ended Question"</li> 
                 <li>Miqdoriy tadqiqot uchun "Likert Scale" testi</li> 
             </ul> 
@@ -112,13 +116,15 @@
         <div class="card"> 
             <div class="card-header">
                 <img src="{% static 'assets/img/book.png' %}" alt="Dissertatsiya Namunalari">
-                <h2>Dissertatsiya Namunalari</h2>
+                <div class="header-text">
+                    <h2>Dissertatsiya Namunalari</h2>
+                    <p>Toliq dissertatsiya va tezislar</p> 
+                </div>
             </div> 
-            <p>Toliq dissertatsiya va tezislar</p> 
-            <ul> 
-                <li>Harvard Universiteti "Madinaviy Intellekt Global Jamoalarda"</li> 
-                <li>O'zbekiston Milliy Universiteti</li> 
-                <li>"Madinaviylararo Kompetentlik: O'zbekiston Modeli"</li> 
+            <ul class="card-list"> 
+                <li>Harvard Universiteti (2024) "Cultural Inteligence in Global Teams"</li> 
+                <li>O'zbekiston Milliy Universiteti (2025)</li> 
+                <li>"Madanayatlararo Kompetentlik: O'zbekiston Master"</li> 
             </ul> 
             <div class="buttons"> 
                 <a href="" target="_blank" class="btn btn-download" download><i class='fa-solid fa-download'></i>Yuklab olish</a> 
@@ -128,10 +134,12 @@
         <div class="card"> 
             <div class="card-header">
                 <img src="{% static 'assets/img/brains.png' %}" alt="Nazariy Asoslar">
-                <h2>Nazariy Asoslar</h2> 
+                <div class="header-text">
+                    <h2>Nazariy Asoslar</h2> 
+                    <p>Deardorff, OECD, UNESCO yondashuvlari</p> 
+                </div>
             </div>
-            <p>Deardorff, OECD, UNESCO yondashuvlari</p> 
-            <ul> 
+            <ul class="card-list"> 
                 <li>Deardorff modeli (animatsiya orqali tushuntirilgan)</li> 
                 <li>OECD Global Kompetensiya Dasturi (interaktiv test)</li> 
                 <li>foydalanuvchi hozir muhokama qilmoqda</li> 
@@ -143,12 +151,14 @@
         </div> 
         <div class="card"> 
             <div class="card-header">
-                <img src="{% static 'assets/img/book.png' %}" alt="Ilmiy Forum">
-                <h2>Ilmiy Forum</h2> 
+                <img src="{% static 'assets/img/peoples.png' %}" alt="Ilmiy Forum">
+                <div class="header-text">
+                    <h2>Ilmiy Forum</h2> 
+                    <p>Savol-javob, muhokama, ekspert fikri</p> 
+                </div>
             </div>
-            <p>Savol-javob, muhokama, ekspert fikri</p> 
-            <ul> 
-                <li>Mavzu: "Madinaviylararo konfliktlarni hal qilish"</li> 
+            <ul class="card-list"> 
+                <li>Mavzu: "Madaniyatlararo konffiktiami hal qilish"</li> 
                 <li>UNESCO eksperti bilan onlayn suhbat</li> 
                 <li>3 ta foydalanuvchi hozir muhokama qilmoqda</li> 
             </ul> 
@@ -167,10 +177,10 @@
             <span class="dash"></span> 
         </div> 
         <div class="lang-options fade-up delay-3">
-            <a href="{% url 'lan_switch_brain' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> Uzbek</a>
-            <a href="{% url 'lan_switch_brain' 'ru' %}"><img src="{% static 'assets/img/ru.png' %}" width="24" height="16"> Russian</a>
-            <a href="{% url 'lan_switch_brain' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> English</a>
-            <a href="{% url 'lan_switch_brain' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> Turkcha</a>
+            <a href="{% url 'lan_switch_research' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> Uzbek</a>
+            <a href="{% url 'lan_switch_research' 'ru' %}"><img src="{% static 'assets/img/ru.png' %}" width="24" height="16"> Russian</a>
+            <a href="{% url 'lan_switch_research' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> English</a>
+            <a href="{% url 'lan_switch_research' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> Turkcha</a>
         </div>
     </div> 
 </div>
