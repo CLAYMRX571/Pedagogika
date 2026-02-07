@@ -265,12 +265,6 @@ header h1 {
     margin-bottom: 10px;
 } 
 
-header p { 
-    font-size: 1.5rem; 
-    color: white;
-    margin: 0;
-} 
-
 .components,
 .content { 
     display: flex;
@@ -314,7 +308,7 @@ header p {
     flex-direction: column;
     justify-content: center; 
     align-items: center;    
-    gap: 6px;
+    gap: 5px;
 }
 
 .component ul.check-list {
@@ -331,8 +325,8 @@ header p {
 .check-list li {
     display: flex;
     align-items: center;
-    gap: 15px;              
-    font-size: 12px;
+    gap: 6px;              
+    font-size: 14px;
     margin-bottom: 8px;
 }
 
@@ -343,6 +337,21 @@ header p {
     flex-shrink: 0;
 }
 
+.header-inline {
+    display: flex;
+    align-items: center;   
+    gap: 5px;            
+}
+
+.header-inline img {
+    width: 50px;        
+    height: auto;
+}
+
+.header-inline h3 {
+    margin: 0;           
+}
+
 .legend { 
     display: flex;                 
     justify-content: center;     
@@ -351,28 +360,35 @@ header p {
 } 
 
 .legend-item { 
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 1rem; 
+    display: flex; 
 } 
 
-.legend-color { 
-    display: inline-block;
+.legend-color {
+    display: inline-flex;        
+    align-items: center;         
+    gap: 6px;                   
+    min-width: 130px;           
+    font-size: 1rem;
+    line-height: 2;
+}
+
+.legend-color::before { 
+    content: "";
     width: 12px;
     height: 12px;
     border-radius: 50%;
+    flex-shrink: 0;   
 } 
 
-.legend-color.blue { 
+.legend-color.blue::before { 
     background-color: red; 
 }
 
-.legend-color.red { 
+.legend-color.red::before { 
     background-color: green; 
 }
 
-.legend-color.green { 
+.legend-color.green::before { 
     background-color: yellow; 
 }
 
@@ -415,6 +431,13 @@ header p {
     height: 200px;     
     object-fit: contain;
     margin-bottom: 2px;
+    animation: revealUp 0.9s ease-out both;
+    transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.card-img:hover {
+    transform: perspective(600px) rotateX(6deg) scale(1.04);
+    filter: drop-shadow(0 14px 30px rgba(0,0,0,0.28));
 }
 
 .icon-heading {
@@ -432,7 +455,7 @@ header p {
     width: 280px;           
     height: 40px;
     padding: 10px 10px;
-    background-color: dodgerblue; 
+    background-color: white; 
     color: black;
     font-size: 18px;
     border-radius: 8px;
@@ -457,4 +480,15 @@ header p {
 .btn:hover {
     background-color: hotpink;
     transform: translateY(-2px);
+}
+
+@keyframes revealUp {
+    0% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
