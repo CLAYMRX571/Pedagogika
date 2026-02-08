@@ -221,10 +221,7 @@ html, body {
     animation: fadeIn 0.8s ease-out; 
 }
 
-.ribbon-container {  
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
+.mechanism-bg {  
     background-image: url("../img/mechanism.png");
     background-size: cover;
     background-position: center;
@@ -232,16 +229,17 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 40px;     
+    padding: 40px;
+    position: relative;         
 }   
 
 .ribbon { 
-    position: relative;
-    z-index: 2;
+    z-index: 10;
     background: linear-gradient(180deg, #ffd54f, #ffb300);
-    padding: 18px 70px;
+    padding: 18px 50px;
     box-shadow: 0 10px 0 #e0a800, 0 18px 35px rgba(0, 0, 0, 0.45);
-    clip-path: polygon(0% 50%, 5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%); 
+    clip-path: polygon(0% 50%, 5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%);
+    margin-bottom: 50px;
 } 
 
 .ribbon h1 { 
@@ -254,17 +252,17 @@ html, body {
     text-shadow: 0 2px 0 rgba(255,255,255,0.4), 0 4px 10px rgba(0,0,0,0.25);
 } 
 
-.ribbon-container > *:not(.ribbon) {
-    position: relative;
-    z-index: 1;
+.row {
+    width: 100%;
+    max-width: 1200px;
+    z-index: 5;
 }
 
-.row.top-row {
+.top-row {
     display: flex;
     gap: 30px;
+    align-items: flex-start;
     flex-wrap: wrap;
-    margin-bottom: 40px;
-    margin-top: -500px;
 }
 
 .col {
@@ -292,16 +290,6 @@ html, body {
     display: block;
 }
 
-.play-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 60px;
-    color: white;
-    opacity: 0.8;
-}
-
 .methods-container {
     display: flex;
     flex-wrap: wrap;
@@ -321,34 +309,47 @@ html, body {
 
 .method-item h3 {
     margin: 0;
-    color: #333;
+    color: white;
     font-size: 1.1rem;
+}
+
+.method-item.full-width {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    margin-top: 20px;
+}
+
+.method-item.full-width img {
+    width: 60%;            
+    max-width: 260px;
 }
 
 .bottom-row {
     display: flex;
-    gap: 20px;
-    margin-top: 40px;
+    gap: 15px;
+    margin-top: -40px;
     flex-wrap: wrap;
 }
 
 .bottom-row .section {
     flex: 1;
-    min-width: 200px;
-    background: rgba(0,0,0,0.6);
-    padding: 20px;
+    min-width: 15px;
+    padding: 5px;
     border-radius: 10px;
     text-align: center;
 }
 
 .bottom-row .section h2 {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
     color: white;
 }
 
 .section-image {
     width: 100%;
-    max-width: 200px;
+    max-width: 350px;
     border-radius: 10px;
     display: block;
     margin: 0 auto;
