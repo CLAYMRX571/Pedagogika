@@ -282,6 +282,7 @@ html, body {
     display: inline-block;
     cursor: pointer;
     margin-bottom: 30px;
+    animation: fadeUpImage 0.8s ease both;
 }
 
 .video-thumb {
@@ -305,6 +306,7 @@ html, body {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 10px;
+    animation: fadeUpImage 0.8s ease both;
 }
 
 .method-item h3 {
@@ -324,6 +326,7 @@ html, body {
 .method-item.full-width img {
     width: 60%;            
     max-width: 260px;
+    animation: fadeUpImage 0.8s ease both;
 }
 
 .bottom-row {
@@ -353,4 +356,16 @@ html, body {
     border-radius: 10px;
     display: block;
     margin: 0 auto;
+    animation: fadeUpImage 0.8s ease both;
+}
+
+@keyframes fadeUpImage {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
