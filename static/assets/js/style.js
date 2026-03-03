@@ -34,3 +34,35 @@ window.addEventListener('load', function() {
         document.getElementById('handshake-icon').classList.add('active'); 
     } 
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const overlay = document.getElementById("profileOverlay");
+    const btn = document.getElementById("accountBtn");
+    const closeBtn = document.getElementById("profileClose");
+
+    if (!overlay || !btn || !closeBtn) return;
+
+    btn.addEventListener("click", () => {
+        overlay.classList.add("show");
+        overlay.setAttribute("aria-hidden", "false");
+    });
+
+    closeBtn.addEventListener("click", () => {
+        overlay.classList.remove("show");
+        overlay.setAttribute("aria-hidden", "true");
+    });
+
+    overlay.addEventListener("click", (e) => {
+        if (e.target === overlay) {
+            overlay.classList.remove("show");
+            overlay.setAttribute("aria-hidden", "true");
+        }
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            overlay.classList.remove("show");
+            overlay.setAttribute("aria-hidden", "true");
+        }
+    });
+});

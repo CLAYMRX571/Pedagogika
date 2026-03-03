@@ -90,25 +90,156 @@ html, body {
 }
 
 .auth-buttons {
-    display: flex;
-    gap: 10px;
+    display: flex;  
+    justify-content: flex-end;
 }
 
-.auth-buttons button {
-    padding: 10px 15px;
-    border-radius: 10px;
-    border: none;
-    background: rgba(255,255,255,.25);
-    color: white;
-    font-weight: 600;
-    font-size: 18px;
+.account-btn {
+    border: 0; 
+    background: transparent; 
     cursor: pointer;
-    transition: .3s;
+    width: 44px; 
+    height: 44px; 
+    border-radius: 50%;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
 }
 
-.auth-buttons button:hover {
-    background: hotpink;
-    transform: translateY(-2px);
+.nav-user-img {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%;
+    object-fit: cover; 
+    border: 2px solid #e6eef7;
+}
+
+.profile-overlay {
+    position: fixed; 
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,.20);
+    z-index: 999999;
+}
+
+.profile-overlay.show {
+    display: flex;
+}
+
+.profile-modal {
+    width: 520px;
+    max-width: calc(100vw - 26px);
+    border-radius: 26px;
+    overflow: hidden;
+    box-shadow: 0 18px 60px rgba(0,0,0,.25);
+    transform: translateY(10px);
+    opacity: 0;
+    transition: .18s ease;
+}
+
+.profile-overlay.show .profile-modal{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.pm-topbar {
+    background: rgba(255,255,255,.92);
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(30,60,90,.10);
+}
+
+.pm-title {
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #2a4b67;
+    font-size: 22px;
+}
+
+.pm-close {
+    width: 46px; 
+    height: 46px;
+    border-radius: 14px;
+    border: 0;
+    cursor: pointer;
+    background: rgba(220,230,245,.9);
+    color: #2a4b67;
+    font-size: 20px;
+}
+
+.pm-card {
+    background: rgba(255,255,255,.88);
+    padding: 16px 18px 18px;
+}
+
+.pm-user {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.pm-avatar {
+    width: 120px; 
+    height: 110px;
+    border-radius: 16px;
+    object-fit: cover;
+    background: linear-gradient(180deg,#dbe7f4,#cfe0f2);
+    box-shadow: inset 0 0 0 1px rgba(20,50,80,.06);
+}
+
+.pm-userinfo { 
+    flex: 1; 
+}
+
+.pm-name {
+    font-weight: 800;
+    color: #2a4b67;
+    font-size: 26px;
+    line-height: 1.1;
+}
+
+.pm-username { 
+    margin-top: 6px;
+    color:#7a8ea3; 
+    font-weight: 600; 
+    font-size: 16px; 
+}
+
+.pm-status {
+    display: inline-block;
+    margin-top: 10px;
+    background:#31b37e;
+    color:#fff;
+    padding: 8px 14px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.pm-divider {
+    height: 1px;
+    background: rgba(42,75,103,.12);
+    margin: 14px 0;
+}
+
+.pm-item {
+    display: block;
+    text-decoration: none;
+    background: rgba(250,252,255,.90);
+    border: 1px solid rgba(42,75,103,.10);
+    padding: 14px;
+    border-radius: 14px;
+    color:#2a4b67;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.pm-logout { 
+    color:#e14b4b; 
 }
 
 @keyframes fadeUp {

@@ -222,7 +222,7 @@ html, body {
 }
 
 .mechanism-bg {  
-    background-image: url("../img/mechanism.png");
+    background-image: url("../img/ped.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -331,33 +331,39 @@ html, body {
 
 .bottom-row {
     display: flex;
-    gap: 15px;
-    margin-top: -40px;
+    justify-content: center;
+    align-items: stretch;
+    gap: 40px;
+    margin-top: 20px;
     flex-wrap: wrap;
 }
 
 .bottom-row .section {
-    flex: 1;
-    min-width: 15px;
-    padding: 5px;
-    border-radius: 10px;
+    flex: 1 1 300px;          
+    max-width: 320px;         
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-}
-
-.bottom-row .section h2 {
-    margin-bottom: 10px;
-    font-size: 1.3rem;
-    color: white;
 }
 
 .section-image {
     width: 100%;
-    max-width: 350px;
-    border-radius: 10px;
+    height: 220px;      
+    object-fit: contain; 
     display: block;
-    margin: 0 auto;
+    margin-bottom: 15px;
     animation: fadeUpImage 0.8s ease both;
 }
+
+.bottom-row .section h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    line-height: 1.3;
+    min-height: 52px; 
+}
+
 
 @keyframes fadeUpImage {
     from {

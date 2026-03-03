@@ -27,8 +27,30 @@
             <a href="{% url 'lan_switch' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16">{% trans 'Turkcha' %}</a>
         </div>
         <div class="auth-buttons fade-up delay-3">
-            <button>{% trans 'Login' %}</button>
-            <button>{% trans 'Register' %}</button>
+            <button type="button" class="account-btn" id="accountBtn" aria-label="Account">
+                <img src="{% static 'assets/img/user.png' %}" class="nav-user-img" alt="user">
+            </button>
+        </div>
+        <div class="profile-overlay" id="profileOverlay" aria-hidden="true">
+            <div class="profile-modal" role="dialog" aria-modal="true">
+                <div class="pm-topbar">
+                    <div class="pm-title">PROFIL</div>
+                    <button type="button" class="pm-close" id="profileClose" aria-label="close">✕</button>
+                </div>
+                <div class="pm-card">
+                    <div class="pm-user">
+                        <img src="{% static 'assets/img/user.png' %}" class="pm-avatar" alt="user">
+                        <div class="pm-userinfo">
+                            <div class="pm-name">Shohsanam Shodiyeva</div>
+                            <span class="pm-username">Shodiyeva97</span>
+                            <span class="pm-status">✓ Aktiv</span>
+                        </div>
+                    </div>
+                    <div class="pm-divider"></div>
+                    <a href="" class="pm-item">{% trans "Profil" %}</a>
+                    <a href="" class="pm-item pm-logout">{% trans "Chiqish" %}</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
