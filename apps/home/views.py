@@ -10,5 +10,5 @@ def Homeviews(request):
 
     return render(request, 'index.html', context)
 
-def lan_switch(request, lan):
-    return redirect(f'/{lan}/')
+def lan_switch_home(request, lan):
+    return redirect(f'/home/{lan}/')

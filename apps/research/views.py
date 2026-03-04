@@ -11,4 +11,4 @@ def Researchviews(request):
     return render(request, 'research.html', context)
 
 def lan_switch_research(request, lan):
-    return redirect(f'/{lan}/research/')
+    return redirect(f'/research/{lan}/')

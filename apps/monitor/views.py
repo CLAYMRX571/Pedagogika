@@ -11,4 +11,4 @@ def Monitorviews(request):
     return render(request, 'monitor.html', context)
 
 def lan_switch_monitor(request, lan):
-    return redirect(f'/{lan}/monitor/')
+    return redirect(f'/monitor/{lan}/')

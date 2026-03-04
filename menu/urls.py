@@ -17,11 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
-# from apps.accounts.views import Accountsviews, lan_switch_account
+from apps.base.views import Baseviews
 from apps.brain.views import Brainviews, lan_switch_brain
 from apps.handshake.views import Handshakeviews, lan_switch_handshake
 from apps.health.views import Healthviews, lan_switch_health
-from apps.home.views import Homeviews, lan_switch
+from apps.home.views import Homeviews, lan_switch_home
 from apps.model.views import Modelviews, lan_switch_model
 from apps.multimedia.views import Multimediaviews, lan_switch_multimedia
 from apps.monitor.views import Monitorviews, lan_switch_monitor
@@ -32,13 +32,13 @@ from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 
 urlpatterns = [
+    path('', Baseviews, name='base'),
     path('i18n/', include('django.conf.urls.i18n')),
     path('ckeditor5/', include('django_ckeditor_5.urls')),
-    # path('lan/accounts/<str:lan>/', lan_switch_a, name='lan_switch_about'),
     path('lan/brain/<str:lan>/', lan_switch_brain, name='lan_switch_brain'),
     path('lan/handshake/<str:lan>/', lan_switch_handshake, name='lan_switch_handshake'),
     path('lan/health/<str:lan>/', lan_switch_health, name='lan_switch_health'),
-    path('lan/<str:lan>/', lan_switch, name='lan_switch'),
+    path('lan/home/<str:lan>/', lan_switch_home, name='lan_switch_home'),
     path('lan/model/<str:lan>/', lan_switch_model, name='lan_switch_model'),
     path('lan/monitor/<str:lan>/', lan_switch_monitor, name='lan_switch_monitor'),
     path('lan/multimedia/<str:lan>/', lan_switch_multimedia, name='lan_switch_multimedia'),
@@ -49,11 +49,10 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     path('admin/', admin.site.urls),
-    # path('accounts/', Accountsviews, name='accounts'),
     path('brain/', Brainviews, name='brain'),
     path('handshake/', Handshakeviews, name='handshake'),
     path('health/', Healthviews, name='health'),
-    path('', Homeviews, name='home'),
+    path('home/', Homeviews, name='home'),
     path('model/', Modelviews, name='model'),
     path('monitor/', Monitorviews, name='monitor'),
     path('multimedia/', Multimediaviews, name='multimedia'),

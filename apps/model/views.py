@@ -11,4 +11,4 @@ def Modelviews(request):
     return render(request, 'model.html', context)
 
 def lan_switch_model(request, lan):
-    return redirect(f'/{lan}/model/')
+    return redirect(f'/model/{lan}/')

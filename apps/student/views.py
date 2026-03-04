@@ -11,4 +11,4 @@ def Studentviews(request):
     return render(request, 'student.html', context)
 
 def lan_switch_student(request, lan):
-    return redirect(f'/{lan}/student/')
+    return redirect(f'/student/{lan}/')

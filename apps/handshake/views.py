@@ -11,4 +11,4 @@ def Handshakeviews(request):
     return render(request, 'handshake.html', context)
 
 def lan_switch_handshake(request, lan):
-    return redirect(f'/{lan}/handshake/')
+    return redirect(f'/handshake/{lan}/')

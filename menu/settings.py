@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_ckeditor_5',
 
-    'apps.accounts',
+    'apps.base',
     'apps.brain',
     'apps.handshake',
     'apps.health',
@@ -141,7 +141,6 @@ MODELTRANSLATION_FALLBACK_LANGUAGES = {'default':('en', 'uz'), 'uz':('en',), 'en
 MODELTRANSLATION_PREPOPULATE_LANGUAGE = 'uz'
 
 MODELTRANSLATION_TRANSLATION_FILES = (
-    'apps.accounts.translations',
     'apps.brain.translations',
     'apps.handshake.translations',
     'apps.health.translations',
@@ -298,7 +297,7 @@ JAZZMIN_SETTINGS = {
         "auth.group": "fas fa-users",
         "auth.user": "fa fa-user",
         "home.home": "fa fa-home",
-        "accounts.accounts": "fa fa-user-lock",
+        "base.base": "fa fa-user-lock",
         "monitor.monitor": "fas fa-desktop",
         "pedagogical.pedagogical": "fas fa-person",
         "research.research": "fas fa-magnifying-glass",

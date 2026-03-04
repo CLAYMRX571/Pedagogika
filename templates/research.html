@@ -37,11 +37,6 @@
                 <i class='fa-solid fa-magnifying-glass'></i>
                 <input type="text" placeholder="Ilmiy maqolalarni qidirish..." aria-label="Qidiruv">
             </div>
-            <select> 
-                <option>Yil</option> 
-                <option>Til</option> 
-                <option>Tadqiqot Usuli</option> 
-            </select> 
             <div class="select-wrapper">
                 <select>
                     <option selected disabled>Research Method</option>
@@ -59,7 +54,7 @@
         <h1>Ilmiy Tadqiqotlar</h1> 
     </div> 
     <div class="cards"> 
-        <div class="card"> 
+        <div class="card fade-in"> 
             <div class="card-header">
                 <img src="{% static 'assets/img/doc.png' %}" alt="Ilmiy maqola">
                 <div class="header-text">
@@ -68,7 +63,7 @@
                 </div>
             </div>
             <ul class="card-list"> 
-                <li>Deardorff (2009) 'Madinaviy Kompetensiya'</li> 
+                <li>Deardorff (2009) 'Madaniy Kompetensiya'</li> 
                 <li>OECD (2023) 'Global Kompetensiya Dasturi'</li> 
             </ul> 
             <div class="buttons"> 
@@ -76,7 +71,7 @@
                 <a href="" target="_blank" class="btn btn-read"><i class='fa-brands fa-readme'></i>Qo'shimcha o'qish</a>  
             </div> 
         </div> 
-        <div class="card"> 
+        <div class="card fade-in"> 
             <div class="card-header">
                 <img src="{% static 'assets/img/monitor.png' %}" alt="Statistik Ma'lumotlar">
                 <div class="header-text">
@@ -93,7 +88,7 @@
                 <a href="" target="_blank" class="btn btn-read"><i class='fa-brands fa-readme'></i>Qo'shimcha o'qish</a>  
             </div> 
         </div> 
-        <div class="card"> 
+        <div class="card fade-in"> 
             <div class="card-header">
                 <img src="{% static 'assets/img/analiz.png' %}" alt="Tadqiqot metodlari">
                 <div class="header-text">
@@ -110,7 +105,7 @@
                 <a href="" target="_blank" class="btn btn-read"><i class='fa-brands fa-readme'></i>Qo'shimcha o'qish</a>  
             </div> 
         </div> 
-        <div class="card"> 
+        <div class="card fade-in"> 
             <div class="card-header">
                 <img src="{% static 'assets/img/book.png' %}" alt="Dissertatsiya Namunalari">
                 <div class="header-text">
@@ -119,18 +114,19 @@
                 </div>
             </div> 
             <ul class="card-list"> 
-                <li>Harvard Universiteti (2024) "Cultural Inteligence in Global Teams"</li> 
+                <li>Harvard Universiteti (2024)</li>
+                <li>"Cultural Inteligence in Global Teams"</li> 
                 <li>O'zbekiston Milliy Universiteti (2025)</li> 
-                <li>"Madanayatlararo Kompetentlik: O'zbekiston Master"</li> 
+                <li>"Madaniyatlararo Kompetentlik: O'zbekiston"</li> 
             </ul> 
             <div class="buttons"> 
                 <a href="" target="_blank" class="btn btn-download" download><i class='fa-solid fa-download'></i>Yuklab olish</a> 
                 <a href="" target="_blank" class="btn btn-read"><i class='fa-brands fa-readme'></i>Qo'shimcha o'qish</a> 
             </div> 
         </div> 
-        <div class="card"> 
+        <div class="card card-wide fade-in"> 
             <div class="card-header">
-                <img src="{% static 'assets/img/brains.png' %}" alt="Nazariy Asoslar">
+                <img src="{% static 'assets/img/brains.png' %}" alt="Nazariy">
                 <div class="header-text">
                     <h2>Nazariy Asoslar</h2> 
                     <p>Deardorff, OECD, UNESCO yondashuvlari</p> 
@@ -139,29 +135,33 @@
             <ul class="card-list"> 
                 <li>Deardorff modeli (animatsiya orqali tushuntirilgan)</li> 
                 <li>OECD Global Kompetensiya Dasturi (interaktiv test)</li> 
-                <li>foydalanuvchi hozir muhokama qilmoqda</li> 
             </ul> 
             <div class="buttons"> 
                 <a href="" target="_blank" class="btn btn-download" download><i class='fa-solid fa-download'></i>Yuklab olish</a> 
                 <a href="" target="_blank" class="btn btn-read"><i class='fa-brands fa-readme'></i>Qo'shimcha o'qish</a> 
             </div> 
         </div> 
-        <div class="card"> 
-            <div class="card-header">
-                <img src="{% static 'assets/img/peoples.png' %}" alt="Ilmiy Forum">
-                <div class="header-text">
-                    <h2>Ilmiy Forum</h2> 
-                    <p>Savol-javob, muhokama, ekspert fikri</p> 
+        <div class="card card-wide forum fade-in"> 
+            <div class="forum-left">
+                <div class="card-header">
+                    <img src="{% static 'assets/img/peoples.png' %}" alt="Ilmiy Forum">
+                    <div class="header-text">
+                        <h2>Ilmiy Forum</h2> 
+                        <p>Savol-javob, muhokama, ekspert fikri</p> 
+                    </div>
                 </div>
+                <ul class="card-list"> 
+                    <li>Mavzu: "Madaniyatlararo konffiktiami hal qilish"</li> 
+                    <li>UNESCO eksperti bilan onlayn suhbat</li> 
+                    <li>3 ta foydalanuvchi hozir muhokama qilmoqda</li> 
+                </ul> 
+                <div class="buttons"> 
+                    <a href="" target="_blank" class="btn btn-download"><i class='fa-solid fa-comment-sms'></i>Muhokama qilish</a> 
+                </div> 
             </div>
-            <ul class="card-list"> 
-                <li>Mavzu: "Madaniyatlararo konffiktiami hal qilish"</li> 
-                <li>UNESCO eksperti bilan onlayn suhbat</li> 
-                <li>3 ta foydalanuvchi hozir muhokama qilmoqda</li> 
-            </ul> 
-            <div class="buttons"> 
-                <a href="" target="_blank" class="btn btn-download"><i class='fa-solid fa-comment-sms'></i>Muhokama qilish</a> 
-            </div> 
+            <div class="forum-illus">
+                <img src="{% static 'assets/img/test.png' %}" alt="">
+            </div>
         </div> 
     </div> 
 </div>

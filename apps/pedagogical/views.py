@@ -11,4 +11,4 @@ def Pedagogicalviews(request):
     return render(request, 'pedagogical.html', context)
 
 def lan_switch_pedagogical(request, lan):
-    return redirect(f'/{lan}/pedagogical/')
+    return redirect(f'/pedagogical/{lan}/')

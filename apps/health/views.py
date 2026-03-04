@@ -11,4 +11,4 @@ def Healthviews(request):
     return render(request, 'health.html', context)
 
 def lan_switch_health(request, lan):
-    return redirect(f'/{lan}/health/')
+    return redirect(f'/health/{lan}/')

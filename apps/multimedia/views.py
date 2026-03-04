@@ -11,4 +11,4 @@ def Multimediaviews(request):
     return render(request, 'multimedia.html', context)
 
 def lan_switch_multimedia(request, lan):
-    return redirect(f'/{lan}/multimedia/')
+    return redirect(f'/multimedia/{lan}/')
